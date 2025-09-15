@@ -44,10 +44,8 @@ const Navbar = () => {
 
         {/* Right-side items */}
         <div className="flex items-center gap-[10px]">
-          <p className="font-geist text-white leading-[100%] font-normal">
-            Search
-          </p>
-          <button className="px-[6px] w-[88px] h-[32px] bg-[#EDEDED] text-[#0A0A0A] font-medium text-sm leading-5 tracking-normal">
+          <p className="font-geist text-white font-normal">Search</p>
+          <button className="px-[6px] w-[88px] h-[32px] bg-[#EDEDED] text-[#0A0A0A] font-medium text-sm">
             Book Call
           </button>
 
@@ -66,6 +64,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
 
