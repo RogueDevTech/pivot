@@ -10,10 +10,10 @@ const Hero = () => {
   return (
     <section className="w-full h-full">
       <div className="flex flex-col gap-[32px]">
-        <div className="flex flex-col gap-[24px]">
-          <Text>Solutions/Products</Text>
+        <div className="flex flex-col gap-[12px]">
+          <Text>Partners</Text>
 
-          <h2 className="text-[#ffffff] leading-[36px] text-[28px] font-meduim w-[616px]">
+          <h2 className="text-[#ffffff] leading-[36px] text-[28px] font-meduim lg:w-[616px] w-full">
             Trusted by Companies Building the Future of AI
           </h2>
           <p className="w-[728px] text-400 font-Regular leading-[180%] text-[14px] tracking-normal text-[#9EA3A2]">

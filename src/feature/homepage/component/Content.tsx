@@ -1,12 +1,11 @@
 import thirdImage from "@/components/images/third-image.webp";
 import forthImage from "@/components/images/forth-homepage.png";
-import fifthImage from "@/components/images/fifth-homepage.jpg";
+import fifthImage from "@/components/images/missing-content.png";
 import Image, { StaticImageData } from "next/image";
+
 import React from "react";
 import Button from "@/components/Button";
 import Text from "@/components/Text";
-
-// Define the interface for research cards
 interface ResearchCard {
   id: number;
   title: string;
@@ -14,7 +13,6 @@ interface ResearchCard {
 }
 
 const Content: React.FC = () => {
-  // Update the researchCards object with proper typing
   const researchCards: { [key: string]: ResearchCard[] } = {
     privacy: [
       {
@@ -63,7 +61,7 @@ const Content: React.FC = () => {
         <div>
           {researchCards.privacy.map((card) => (
             <div key={card.id} className="flex flex-col gap-[24px]">
-              <div className="relative h-[364px] w-[237px]">
+              <div className="relative h-[364px] lg:w-[237px] w-full">
                 <Image
                   src={card.imageSrc}
                   alt="image"
@@ -71,7 +69,7 @@ const Content: React.FC = () => {
                   className="object-cover"
                 />
               </div>
-              <p className="w-[219px] text-[#ffffff] leading-[100%] text-[16px] tracking-normal font-medium">
+              <p className="lg:w-[219px] w-full text-[#ffffff] leading-[100%] text-[16px] tracking-normal font-medium">
                 {card.title}
               </p>
             </div>
@@ -80,7 +78,7 @@ const Content: React.FC = () => {
         <div>
           {researchCards.carbon.map((card) => (
             <div key={card.id} className="flex flex-col gap-[24px]">
-              <div className="relative h-[176px] w-[237px]">
+              <div className="relative h-[176px] lg:w-[237px] w-full">
                 <Image
                   src={card.imageSrc}
                   alt="image"
@@ -88,7 +86,7 @@ const Content: React.FC = () => {
                   className="object-cover"
                 />
               </div>
-              <p className="w-[219px] text-[#ffffff] leading-[100%] text-[16px] tracking-normal font-medium">
+              <p className="lg:w-[200px] text-[#ffffff] leading-[100%] w-full rotate-0 text-[16px] tracking-[0%] font-medium">
                 {card.title}
               </p>
             </div>
@@ -97,7 +95,7 @@ const Content: React.FC = () => {
         <div>
           {researchCards.dynamic.map((card) => (
             <div key={card.id} className="flex flex-col gap-[24px]">
-              <div className="relative h-[284px] w-[237px]">
+              <div className="relative h-[284px] lg:w-[237px] w-full">
                 <Image
                   src={card.imageSrc}
                   alt="image"
@@ -105,7 +103,7 @@ const Content: React.FC = () => {
                   className="object-cover"
                 />
               </div>
-              <p className="w-[219px] text-[#ffffff] leading-[100%] text-[16px] tracking-normal font-medium">
+              <p className="lg:w-[219px] w-full text-[#ffffff] leading-[100%] text-[16px] tracking-normal font-medium">
                 {card.title}
               </p>
             </div>

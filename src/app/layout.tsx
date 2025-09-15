@@ -1,5 +1,4 @@
 // import type { Metadata } from "next";
-// import "../styles/globals.scss";
 // import Navbar from "../components/Navbar";
 // import Sidebar from "../components/Sidebar";
 
@@ -19,7 +18,7 @@
 //         <Navbar />
 //         <div className="flex max-w-[1440px] mx-auto">
 //           <Sidebar />
-//           <main className="ml-[300px] flex-1 mt-[90px] mb-[32px] min-h-screen overflow-y-auto no-scrollbar px-12">
+
 //             {children}
 //           </main>
 //         </div>
@@ -29,7 +28,7 @@
 // }
 
 import type { Metadata } from "next";
-import "../styles/globals.css"
+import "../styles/globals.css";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 
