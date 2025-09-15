@@ -154,7 +154,7 @@
 // export default Sidebar;
 
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import SearchInput from "./SearchInput";
@@ -163,6 +163,7 @@ import clsx from "clsx";
 
 const Sidebar = () => {
   const pathname = usePathname();
+  const [activeItem, setActiveItem] = useState("")
 
   const { open, close } = useSidebarStore();
 
@@ -173,7 +174,7 @@ const Sidebar = () => {
     };
   }, [open]);
 
-  // sync activeItem with current pathname when page changes
+ 
   useEffect(() => {
     const allItems = [
       { name: "Home", path: "/" },
