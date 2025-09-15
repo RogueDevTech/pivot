@@ -29,7 +29,7 @@
 // }
 
 import type { Metadata } from "next";
-import "../styles/globals.scss";
+import "../styles/globals.css"
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 
