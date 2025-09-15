@@ -1,5 +1,4 @@
 // import type { Metadata } from "next";
-// import "../styles/globals.css"
 // import Navbar from "../components/Navbar";
 // import Sidebar from "../components/Sidebar";
 
@@ -19,7 +18,7 @@
 //         <Navbar />
 //         <div className="flex max-w-[1440px] mx-auto">
 //           <Sidebar />
-//           <main className="ml-[300px] flex-1 mt-[90px] mb-[32px] min-h-screen border-1 border-[red] overflow-y-auto no-scrollbar px-12">
+
 //             {children}
 //           </main>
 //         </div>
@@ -49,7 +48,7 @@ export default function RootLayout({
         <Navbar />
         <div className="flex max-w-[1440px] mx-auto">
           <Sidebar />
-          <main className="flex-1 mt-[85px] mb-[32px] min-h-screen overflow-y-auto no-scrollbar px-4 sm:px-6 md:px-12 md:ml-[260px]">
+          <main className="ml-0 md:ml-[300px] mt-[90px] mb-[32px] min-h-screen overflow-y-auto no-scrollbar px-4 md:px-12">
             {children}
           </main>
         </div>
@@ -57,5 +56,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-//  ml-[300px]

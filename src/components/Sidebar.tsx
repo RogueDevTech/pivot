@@ -173,6 +173,26 @@ const Sidebar = () => {
     };
   }, [open]);
 
+  // sync activeItem with current pathname when page changes
+  useEffect(() => {
+    const allItems = [
+      { name: "Home", path: "/" },
+      { name: "Products", path: "/products" },
+      { name: "Solutions", path: "/solutions" },
+      { name: "Research", path: "/research" },
+      { name: "Company", path: "/company" },
+      { name: "Partners", path: "/partners" },
+      { name: "Careers", path: "/careers" },
+      { name: "Community", path: "/community" },
+      { name: "Blog", path: "/blog" },
+      { name: "Book Call", path: "/book-call" },
+      { name: "Help", path: "/help" },
+      { name: "Feedback", path: "/feedback" },
+    ];
+    const current = allItems.find((item) => item.path === pathname);
+    if (current) setActiveItem(current.name);
+  }, [pathname]);
+
   const navItems = {
     main: [
       { name: "Home", path: "/" },
@@ -196,7 +216,6 @@ const Sidebar = () => {
 
   return (
     <>
-      {/* Overlay (mobile only) */}
       {open && (
         <div
           className="fixed inset-0 bg-black/50 z-30 md:hidden"
@@ -232,7 +251,7 @@ const Sidebar = () => {
                   }`}
                 >
                   <span>{item.name}</span>
-                  {pathname === item.path && (
+                  {activeItem === item.name && (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-4 w-4"
@@ -250,7 +269,6 @@ const Sidebar = () => {
               </li>
             ))}
           </ul>
-
           {/* Company */}
           <ul className="px-6 py-5 space-y-4 border-b border-[#292929]">
             {navItems.company.map((item) => (
@@ -263,7 +281,7 @@ const Sidebar = () => {
                   }`}
                 >
                   <span>{item.name}</span>
-                  {pathname === item.path && (
+                  {activeItem === item.name && (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-4 w-4"
@@ -281,7 +299,7 @@ const Sidebar = () => {
               </li>
             ))}
           </ul>
-
+          
           {/* Support */}
           <ul className="px-6 py-5 space-y-4">
             {navItems.support.map((item) => (
@@ -294,7 +312,7 @@ const Sidebar = () => {
                   }`}
                 >
                   <span>{item.name}</span>
-                  {pathname === item.path && (
+                  {activeItem === item.name && (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-4 w-4"

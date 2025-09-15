@@ -3,6 +3,9 @@ import React from "react";
 import imgone from "@/components/images/research/research-content.png";
 import imgtwo from "@/components/images/research/research-content-two.png";
 import imgthree from "@/components/images/research/research-content-three.png";
+import img4 from "@/components/images/research/research-content-four.png";
+import img5 from "@/components/images/research/research-content-five.png";
+import img6 from "@/components/images/research/research-content-six.png";
 import Image from "next/image";
 import Bigger from "@/components/Bigger";
 import InnerText from "@/components/InnerText";
@@ -414,7 +417,7 @@ export const DynamicMultiModelContent: React.FC = () => (
             src={imgthree}
             fill
             alt="img"
-            className="object-fit w-full h-full"
+            className="object-cover w-full h-full"
           />
         </div>
       </div>
@@ -624,8 +627,6 @@ export const DynamicMultiModelContent: React.FC = () => (
           </li>
         </ul>
       </div>
-
-      {/* 6.2 Limitations and Future Work */}
       <div className="mb-10">
         <h3 className=" text-[#FFFFFF] leading-[36px] tracking-[0%] text-[14px] text-500 mb-4">
           6.2 Limitations and Future Work
@@ -784,8 +785,8 @@ export const DynamicMultiModelContent: React.FC = () => (
 );
 
 export const PrivacyPreservingContent: React.FC = () => (
-  <div>
-    <section>
+  <div className="flex flex-col gap-[32px] w-full lg:w-[729px]">
+    <section className="flex flex-col gap-[24px]">
       <Bigger>Abstract</Bigger>
       <InnerText>
         Enterprise adoption of AI is often constrained by data privacy
@@ -805,12 +806,12 @@ export const PrivacyPreservingContent: React.FC = () => (
         organizations with sensitive datasets, enabling previously impossible
         collaborative AI initiatives.
       </InnerText>
-      <p>
+      <InnerText>
         Keywords: federated learning, differential privacy, secure computation,
         enterprise AI, data sovereignty, GDPR compliance
-      </p>
+      </InnerText>
     </section>
-    <section>
+    <section className="flex flex-col gap-[24px]">
       <Bigger>1. Introduction</Bigger>
       <InnerText>
         The proliferation of data privacy regulations (GDPR, CCPA, HIPAA) and
@@ -841,7 +842,7 @@ export const PrivacyPreservingContent: React.FC = () => (
         robust security framework with Byzantine-resilient aggregation.
       </InnerText>
     </section>
-    <section>
+    <section className="flex flex-col gap-[24px]">
       <Bigger>2. Related Work</Bigger>
       <InnerText>
         McMahan et al. introduced federated learning with the FedAvg algorithm,
@@ -858,7 +859,7 @@ export const PrivacyPreservingContent: React.FC = () => (
         multiple regulated industries.
       </InnerText>
     </section>
-    <section>
+    <section className="flex flex-col gap-[24px]">
       <Bigger>3. System Architecture</Bigger>
       <div>
         <Minisize>3.1 Architecture Overview </Minisize>
@@ -873,11 +874,11 @@ export const PrivacyPreservingContent: React.FC = () => (
           adaptive noise calibration:
         </InnerText>
       </div>
-      <div>
+      <div className="flex flex-col gap-[8px]">
         <Minisize>3. System Architecture </Minisize>
         <Minisize>3.1 Architecture Overview</Minisize>
       </div>
-      <div>
+      <div className="flex flex-col gap-[4px]">
         <InnerText>
           Our system implements local differential privacy with adaptive noise
           calibration:
@@ -887,7 +888,7 @@ export const PrivacyPreservingContent: React.FC = () => (
             src={imgtwo}
             fill
             alt="img"
-            className="object-fit w-full h-full"
+            className="object-cover w-full h-full"
           />
         </div>
         <InnerText>
@@ -897,7 +898,7 @@ export const PrivacyPreservingContent: React.FC = () => (
           privacy accounting tracks budget consumption across training rounds.
         </InnerText>
       </div>
-      <div>
+      <div className="flex flex-col gap-[24px]">
         <Minisize>3.2.2 Secure Multi-Party Aggregation</Minisize>
         <InnerText>
           FedSecure implements secure aggregation combining threshold encryption
@@ -906,7 +907,7 @@ export const PrivacyPreservingContent: React.FC = () => (
           computation enabling encrypted model update aggregation.
         </InnerText>
       </div>
-      <div>
+      <div className="flex flex-col gap-[24px]">
         <Minisize>3.3 Scalable Coordination Protocol</Minisize>
         <InnerText>
           Traditional federated learning requires O(n²) communication
@@ -919,7 +920,7 @@ export const PrivacyPreservingContent: React.FC = () => (
           fairness.
         </InnerText>
       </div>
-      <div>
+      <div className="flex flex-col gap-[24px]">
         <Minisize>3.4 Heterogeneity Adaptation</Minisize>
         <InnerText>
           Enterprise federated learning faces significant data and system
@@ -932,9 +933,9 @@ export const PrivacyPreservingContent: React.FC = () => (
         </InnerText>
       </div>
     </section>
-    <section>
+    <section className="flex flex-col gap-[24px]">
       <Bigger>4. Implementation Details</Bigger>
-      <div>
+      <div className="flex flex-col gap-[16px]">
         <Minisize>4.1 Security Framework</Minisize>
         <InnerText>
           Our security framework addresses honest-but-curious coordinators,
@@ -944,7 +945,7 @@ export const PrivacyPreservingContent: React.FC = () => (
           comprehensive logging systems.
         </InnerText>
       </div>
-      <div>
+      <div className="flex flex-col gap-[24px]">
         <Minisize>4.2 Performance Optimization</Minisize>
         <InnerText>
           Communication efficiency includes gradient compression through top-k
@@ -956,9 +957,9 @@ export const PrivacyPreservingContent: React.FC = () => (
         </InnerText>
       </div>
     </section>
-    <section>
+    <section className="flex flex-col gap-[24px]">
       <Bigger>5. Experimental Evaluation</Bigger>
-      <div>
+      <div className="flex flex-col gap-[16px]">
         <Minisize>5.1 Experimental Setup</Minisize>
         <InnerText>
           We evaluated FedSecure across three enterprise domains: healthcare
@@ -969,7 +970,7 @@ export const PrivacyPreservingContent: React.FC = () => (
           for predictive maintenance.
         </InnerText>
       </div>
-      <div>
+      <div className="flex flex-col gap-[16px]">
         <Minisize>5.2 Performance Results</Minisize>
         <InnerText>
           FedSecure achieved remarkable accuracy preservation across all
@@ -987,7 +988,7 @@ export const PrivacyPreservingContent: React.FC = () => (
           complexity.
         </InnerText>
       </div>
-      <div>
+      <div className="flex flex-col gap-[16px]">
         <Minisize>5.3 Security Evaluation</Minisize>
         <InnerText>
           Attack resistance testing showed reconstruction accuracy 2% for model
@@ -999,7 +1000,7 @@ export const PrivacyPreservingContent: React.FC = () => (
         </InnerText>
       </div>
     </section>
-    <section>
+    <section className="flex flex-col gap-[24px]">
       <Bigger>6. Case Study: Global Healthcare Consortium</Bigger>
       <div>
         <Minisize>6.1 Deployment Overview</Minisize>
@@ -1011,7 +1012,7 @@ export const PrivacyPreservingContent: React.FC = () => (
           privacy requirements.
         </InnerText>
       </div>
-      <div>
+      <div className="flex flex-col gap-[16px]">
         <Minisize>6.2 Results and Impact</Minisize>
         <InnerText>
           Our deployment achieved 91.2% diagnostic accuracy across all rare
@@ -1027,7 +1028,7 @@ export const PrivacyPreservingContent: React.FC = () => (
         </InnerText>
       </div>
     </section>
-    <section>
+    <section className="flex flex-col gap-[24px]">
       <Bigger>7. Discussion</Bigger>
       <div>
         <Minisize>7.1 Key Insights</Minisize>
@@ -1040,7 +1041,7 @@ export const PrivacyPreservingContent: React.FC = () => (
           through mathematical proofs rather than policy commitments.
         </InnerText>
       </div>
-      <div>
+      <div className="flex flex-col gap-[16px]">
         <Minisize>7.2 Limitations and Future Work</Minisize>
         <InnerText>
           Current limitations include model architecture constraints focusing on
@@ -1051,9 +1052,9 @@ export const PrivacyPreservingContent: React.FC = () => (
         </InnerText>
       </div>
     </section>
-    <section>
+    <section className="flex flex-col gap-[24px]">
       <Bigger>8. Conclusion</Bigger>
-      <div>
+      <div className="flex flex-col gap-[24px]">
         <InnerText>
           We present the design and evaluation of FedSecure, a
           privacy-preserving federated learning framework that we developed
@@ -1064,8 +1065,8 @@ export const PrivacyPreservingContent: React.FC = () => (
           integration, hierarchical coordination reducing communication
           complexity, and Byzantine-resilient aggregation.
         </InnerText>
-        <div>
-          <Minisize>Acknowledgments </Minisize>
+        <div className="flex flex-col gap-[16px]">
+          <Bigger>Acknowledgments </Bigger>
           <InnerText>
             We thank participating organizations in our healthcare, financial
             services, and manufacturing evaluations for their collaboration and
@@ -1088,9 +1089,9 @@ export const PrivacyPreservingContent: React.FC = () => (
         </InnerText>
       </div>
     </section>
-    <section>
-      <Minisize>References</Minisize>
-      <div>
+    <section className="flex flex-col gap-[24px]">
+      <Bigger>References</Bigger>
+      <div className="flex flex-col gap-[24px]">
         <InnerText>
           [1] Melis, L., Song, C., De Cristofaro, E., & Shmatikov, V. (2019).
           Exploiting unintended feature leakage in collaborative learning. 2019
@@ -1161,8 +1162,8 @@ export const DynamicInfrastructureContent: React.FC = () => (
   //     reliability.
   //   </p>
   // </div>
-  <div>
-    <section>
+  <div className="flex flex-col gap-[32px] w-full lg:w-[729px">
+    <section className="flex flex-col gap-[24px]">
       <Bigger>Abstract</Bigger>
       <InnerText>
         The deployment of AI applications at the network edge promises ultra-low
@@ -1188,7 +1189,7 @@ export const DynamicInfrastructureContent: React.FC = () => (
         computing, renewable energy, model optimization, distributed systems
       </InnerText>
     </section>
-    <section>
+    <section className="flex flex-col gap-[24px]">
       <Bigger>1. Introduction</Bigger>
       <InnerText>
         The proliferation of latency-sensitive AI applications—from autonomous
@@ -1213,7 +1214,7 @@ export const DynamicInfrastructureContent: React.FC = () => (
         distributed infrastructure.
       </InnerText>
     </section>
-    <section>
+    <section className="flex flex-col gap-[24px]">
       <Bigger>2. Related Work</Bigger>
       <InnerText>
         Early edge AI work focused on model optimization for
@@ -1231,9 +1232,9 @@ export const DynamicInfrastructureContent: React.FC = () => (
         locations with varying energy sources and demand patterns.
       </InnerText>
     </section>
-    <section>
+    <section className="flex flex-col gap-[24px]">
       <Bigger>3. System Architecture</Bigger>
-      <div>
+      <div className="flex flex-col gap-[16px]">
         <Minisize>3.1 GreenEdge Framework Overview</Minisize>
         <InnerText>
           GreenEdge implements a three-tier architecture with global
@@ -1243,30 +1244,53 @@ export const DynamicInfrastructureContent: React.FC = () => (
           optimization capabilities.
         </InnerText>
       </div>
-      <div>
+      <div className="flex flex-col gap-[16px]">
         <Minisize>3.2 Carbon Intelligence Layer</Minisize>
         <InnerText>
           The foundation of GreenEdge is comprehensive carbon intelligence
           providing real-time and predictive carbon intensity data through
           integration with multiple sources including grid operator APIs,
           third-party services, local monitoring, and weather-based forecasting.
+        </InnerText>
+        <div className="relative w-full h-[231px]">
+          <Image
+            src={img4}
+            fill
+            alt="img"
+            className="object-cover w-full h-full"
+          />
+        </div>
+        <InnerText>
           Predictive carbon modeling uses machine learning to forecast future
           intensity based on historical patterns, weather forecasts, electricity
           demand predictions, and grid operator schedules.
         </InnerText>
       </div>
-      <div>
+      <div className="flex flex-col gap-[16px]">
         <Minisize>3.3 Carbon-Aware Load Balancing</Minisize>
-        <InnerText>
-          Load balancing decisions consider multiple objectives including
-          latency maintenance, carbon intensity minimization, renewable energy
-          utilization, and load distribution prevention of hotspots. Dynamic
-          request routing includes geographic routing to lower carbon regions,
-          temporal scheduling aligning with renewable periods, and adaptive
-          buffering for batch processing during low-carbon periods.
-        </InnerText>
+        <div>
+          <InnerText>
+            Load balancing decisions consider multiple objectives including
+            latency maintenance, carbon intensity minimization, renewable energy
+            utilization, and load distribution prevention of hotspots.
+          </InnerText>
+          <div className="relative w-full h-[409px]">
+            <Image
+              src={img5}
+              fill
+              alt="img"
+              className="object-cover w-full h-full"
+            />
+          </div>
+          <InnerText>
+            {" "}
+            Dynamic request routing includes geographic routing to lower carbon
+            regions, temporal scheduling aligning with renewable periods, and
+            adaptive buffering for batch processing during low-carbon periods.
+          </InnerText>
+        </div>
       </div>
-      <div>
+      <div className="flex flex-col gap-[2px]">
         <Minisize>3.4 Renewable Energy-Optimized Model Deployment</Minisize>
         <InnerText>
           GreenEdge optimizes deployment strategies based on renewable energy
@@ -1274,11 +1298,19 @@ export const DynamicInfrastructureContent: React.FC = () => (
           models during daylight and model compression during high-carbon
           periods.
         </InnerText>
+        <div className="relative w-full h-[281px]">
+          <Image
+            src={img6}
+            fill
+            alt="img"
+            className="object-cover w-full h-full"
+          />
+        </div>
       </div>
     </section>
-    <section>
+    <section className="flex flex-col gap-[24px]">
       <Bigger>4. Implementation Details</Bigger>
-      <div>
+      <div className="flex flex-col gap-[16px]">
         <Minisize>4.1 System Deployment</Minisize>
         <InnerText>
           GreenEdge is deployed across 50+ edge locations worldwide on
@@ -1288,7 +1320,7 @@ export const DynamicInfrastructureContent: React.FC = () => (
           Prometheus and Grafana.
         </InnerText>
       </div>
-      <div>
+      <div className="flex flex-col gap-[16px]">
         <Minisize>4.2 Model Optimization Pipeline</Minisize>
         <InnerText>
           Before deployment, all models undergo optimization for edge computing
@@ -1299,9 +1331,9 @@ export const DynamicInfrastructureContent: React.FC = () => (
         </InnerText>
       </div>
     </section>
-    <section>
+    <section className="flex flex-col gap-[24px]">
       <Bigger>5. Experimental Evaluation</Bigger>
-      <div>
+      <div className="flex flex-col gap-[16px]">
         <Minisize>5.1 Experimental Setup</Minisize>
         <InnerText>
           We evaluated GreenEdge across globally distributed edge infrastructure
@@ -1314,8 +1346,8 @@ export const DynamicInfrastructureContent: React.FC = () => (
           variations, and 85% of requests requiring 50ms response time.
         </InnerText>
       </div>
-      <div>
-        <div>
+      <div className="flex flex-col gap-[16px]">
+        <div className="flex flex-col gap-[4px]">
           <Minisize>5.2 Performance Results</Minisize>
           <Minisize>5.2.1 Carbon Footprint Reduction</Minisize>
         </div>
@@ -1328,7 +1360,7 @@ export const DynamicInfrastructureContent: React.FC = () => (
           California 38%, Germany 31%, and coal-heavy regions 18% reduction.
         </InnerText>
       </div>
-      <div>
+      <div className="flex flex-col gap-[16px]">
         <Minisize>5.2.2 Performance Impact</Minisize>
         <InnerText>
           Despite carbon optimization, GreenEdge maintained excellent
@@ -1340,7 +1372,7 @@ export const DynamicInfrastructureContent: React.FC = () => (
           load shifting.
         </InnerText>
       </div>
-      <div>
+      <div className="flex flex-col gap-[16px]">
         <Minisize>5.3 Model Performance Under Carbon Optimization</Minisize>
         <InnerText>
           Adaptive model compression showed minimal accuracy impact with INT8
@@ -1350,9 +1382,9 @@ export const DynamicInfrastructureContent: React.FC = () => (
           periods.
         </InnerText>
       </div>
-      <div>
+      <div className="flex flex-col gap-[24px]">
         <Minisize>5.4 Renewable Energy Utilization</Minisize>
-        <div>
+        <div className="flex flex-col gap-[16px]">
           <Minisize>5.4.1 Solar Energy Optimization</Minisize>
           <InnerText>
             GreenEdge achieved significant solar utilization improvements with
@@ -1365,7 +1397,7 @@ export const DynamicInfrastructureContent: React.FC = () => (
           </InnerText>
         </div>
       </div>
-      <div>
+      <div className="flex flex-col gap-[24px]">
         <Minisize>5.4.2 Wind Energy Integration</Minisize>
         <InnerText>
           Wind power integration achieved 48% of compute during peak wind
@@ -1376,9 +1408,9 @@ export const DynamicInfrastructureContent: React.FC = () => (
         </InnerText>
       </div>
     </section>
-    <section>
+    <section className="flex flex-col gap-[24px]">
       <Bigger>6. Discussion</Bigger>
-      <div>
+      <div className="flex flex-col gap-[16px]">
         <Minisize>6.1 Key Insights</Minisize>
         <InnerText>
           Our evaluation demonstrates that carbon optimization and performance
@@ -1391,7 +1423,7 @@ export const DynamicInfrastructureContent: React.FC = () => (
           temporal scheduling potentially delaying non-urgent processing.
         </InnerText>
       </div>
-      <div>
+      <div className="flex flex-col gap-[16px]">
         <Minisize>6.2 Global Impact Projection</Minisize>
         <InnerText>
           If deployed across global edge computing infrastructure, we estimate
@@ -1400,7 +1432,7 @@ export const DynamicInfrastructureContent: React.FC = () => (
           $890M annually, and 40% improvement in renewable energy utilization.
         </InnerText>
       </div>
-      <div>
+      <div className="flex flex-col gap-[16px]">
         <Minisize>6.3 Limitations and Future Work</Minisize>
         <InnerText>
           Current limitations include varying carbon intensity data availability
@@ -1412,9 +1444,9 @@ export const DynamicInfrastructureContent: React.FC = () => (
         </InnerText>
       </div>
     </section>
-    <section>
+    <section className="flex flex-col gap-[24px]">
       <Bigger>7. Conclusion</Bigger>
-      <div>
+      <div className="flex flex-col gap-[24px]">
         <InnerText>
           We present the design and evaluation of FedSecure, a
           privacy-preserving federated learning framework that we developed
@@ -1438,8 +1470,8 @@ export const DynamicInfrastructureContent: React.FC = () => (
           and demonstrates the practical feasibility of large-scale
           privacy-preserving collaboration for next-generation AI applications.
         </InnerText>
-        <div>
-          <Minisize>Acknowledgments</Minisize>
+        <div className="flex flex-col gap-[16px]">
+          <Bigger>Acknowledgments</Bigger>
           <InnerText>
             We thank participating edge computing providers who collaborated in
             our global evaluation and renewable energy data providers who shared
@@ -1451,9 +1483,9 @@ export const DynamicInfrastructureContent: React.FC = () => (
         </div>
       </div>
     </section>
-    <section>
-      <Minisize>References</Minisize>
-      <div>
+    <section className="flex flex-col gap-[24px]">
+      <Bigger>References</Bigger>
+      <div className="flex flex-col gap-[24px]">
         <InnerText>
           [1] International Energy Agency. (2023). Global Energy Review 2023.
           IEA Publications.

@@ -12,7 +12,7 @@ const Minisize: React.FC<TextProps> = ({
   className = "",
 }) => {
   const baseClasses =
-    "font-medium font-[#ffffff] text-[14px] leading-[36px] tracking-[0%] align-middle";
+    "font-medium text-[#ffffff] text-[14px] leading-[36px] tracking-[0%] align-middle";
 
   return <Bigger className={`${baseClasses} ${className}`}>{children}</Bigger>;
 };
