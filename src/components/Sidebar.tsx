@@ -154,7 +154,7 @@
 // export default Sidebar;
 
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import SearchInput from "./SearchInput";
@@ -163,7 +163,7 @@ import clsx from "clsx";
 
 const Sidebar = () => {
   const pathname = usePathname();
-  const [activeItem, setActiveItem] = useState("Home");
+
   const { open, close } = useSidebarStore();
 
   useEffect(() => {
@@ -228,10 +228,24 @@ const Sidebar = () => {
                   href={item.path}
                   onClick={close}
                   className={`flex items-center justify-between py-1 ${
-                    pathname === item.path ? "text-blue-500" : "text-white"
+                    pathname === item.path ? "text-[#FFFFFF]" : "text-[#A1A1A1]"
                   }`}
                 >
                   <span>{item.name}</span>
+                  {pathname === item.path && (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-4 w-4"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  )}
                 </Link>
               </li>
             ))}
@@ -245,10 +259,24 @@ const Sidebar = () => {
                   href={item.path}
                   onClick={close}
                   className={`flex items-center justify-between py-1 ${
-                    pathname === item.path ? "text-blue-500" : "text-white"
+                    pathname === item.path ? "text-[#FFFFFF]" : "text-[#A1A1A1]"
                   }`}
                 >
                   <span>{item.name}</span>
+                  {pathname === item.path && (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-4 w-4"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  )}
                 </Link>
               </li>
             ))}
@@ -262,10 +290,24 @@ const Sidebar = () => {
                   href={item.path}
                   onClick={close}
                   className={`flex items-center justify-between py-1 ${
-                    pathname === item.path ? "text-blue-500" : "text-white"
+                    pathname === item.path ? "text-[#FFFFFF]" : "text-[#A1A1A1]"
                   }`}
                 >
                   <span>{item.name}</span>
+                  {pathname === item.path && (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-4 w-4"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  )}
                 </Link>
               </li>
             ))}

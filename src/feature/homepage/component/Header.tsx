@@ -6,13 +6,13 @@ import Image from "next/image";
 
 const Header = () => {
   return (
-    <section className="flex flex-col gap-4">
+    <section className="flex flex-col gap-4 w-full lg:w-[729px]">
       <div className="flex flex-col gap-3">
-        <h3 className="w-[729px] font-medium leading-[36px] text-[28px] tracking-normal text-[#ffffff]">
+        <h3 className="lg:w-[729px] w-full font-medium leading-[36px] text-[28px] tracking-normal text-[#ffffff]">
           Building open super intelligent infrastructure that powers you and
           your business.
         </h3>
-        <p className=" w-[729px] leading-[100%] tracking-normal text-[#9EA3A2] text-400 text-[14px]">
+        <p className=" lg:w-[729px] w-full leading-[100%] tracking-normal text-[#9EA3A2] text-400 text-[14px]">
           Skip the AI complexity. Our simple APIs give you production-ready AI
           capabilities, letting you focus on creating amazing products instead
           of managing infrastructure.
@@ -50,14 +50,14 @@ const Header = () => {
                   Join Waitlist
                 </button>
                 <Link href={"/learn"} className="no-decoration">
-                  <p className="text-[#9EA3A2] text-[#0A0A0A] font-regular text-[14px] leadind-[20px] tracking-normal">
+                  <p className="text-[#9EA3A2] font-regular text-[14px] leadind-[20px] tracking-normal">
                     Learn More
                   </p>
                 </Link>
               </div>
             </div>
           </div>
-          <div className="relative w-[304px] h-[198px]">
+          <div className="relative lg:w-[304px] w-full h-[198px]">
             <Image
               src={firstImage}
               alt="fill"
@@ -97,14 +97,14 @@ const Header = () => {
                   Join Waitlist
                 </button>
                 <Link href={"/learn"} className="no-decoration">
-                  <p className="text-[#9EA3A2] text-[#0A0A0A] font-regular text-[14px] leadind-[20px] tracking-normal">
+                  <p className="text-[#9EA3A2] font-regular text-[14px] leadind-[20px] tracking-normal">
                     Learn More
                   </p>
                 </Link>
               </div>
             </div>
           </div>
-          <div className="relative w-[304px] h-[198px]">
+          <div className="relative lg:w-[304px] w-full h-[198px]">
             <Image
               src={secondImage}
               alt="fill"
