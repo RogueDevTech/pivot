@@ -20,7 +20,7 @@ const lists = [
 
 const tabContents: Record<string, React.ReactNode> = {
   "flexible-integration": (
-    <div className="flex flex-col lg:flex-row items-center gap-[24px]">
+    <div className="flex flex-col lg:flex-row lg:items-center gap-[24px]">
       <div className="relative lg:w-[396px] h-[333px] w-full">
         <Image
           src={img1}
@@ -29,7 +29,7 @@ const tabContents: Record<string, React.ReactNode> = {
           className="object-fit w-full h-full"
         />
       </div>
-      <div className="flex flex-col gap-[15px] w-[330px]">
+      <div className="flex flex-col gap-[15px] lg:w-[330px] w-full">
         <SolutionText className="text-[14px]">
           HR and Workforce Applications
         </SolutionText>
@@ -52,7 +52,7 @@ const tabContents: Record<string, React.ReactNode> = {
     </div>
   ),
   "developer-first-design": (
-    <div className="flex flex-col lg:flex-row gap-[24px]">
+    <div className="flex flex-col lg:flex-row lg:items-center gap-[24px]">
       <div className="relative lg:w-[396px] h-[333px] w-full">
         <Image
           src={img1}
@@ -61,7 +61,7 @@ const tabContents: Record<string, React.ReactNode> = {
           className="object-fit w-full h-full"
         />
       </div>
-      <div className="flex flex-col gap-[15px] w-[330px]">
+      <div className="flex flex-col gap-[15px] lg:w-[330px] w-full">
         <SolutionText className="text-[14px]">
           HR and Workforce Applications
         </SolutionText>
@@ -84,7 +84,7 @@ const tabContents: Record<string, React.ReactNode> = {
     </div>
   ),
   "built-for-scale": (
-    <div className="flex flex-col lg:flex-row gap-[24px]">
+    <div className="flex flex-col lg:flex-row lg:items-center gap-[24px]">
       <div className="relative lg:w-[396px] h-[333px] w-full">
         <Image
           src={img1}
@@ -93,7 +93,7 @@ const tabContents: Record<string, React.ReactNode> = {
           className="object-fit w-full h-full"
         />
       </div>
-      <div className="flex flex-col gap-[15px] w-[330px]">
+      <div className="flex flex-col gap-[15px] lg:w-[330px] w-full">
         <SolutionText className="text-[14px]">
           HR and Workforce Applications
         </SolutionText>
@@ -116,7 +116,7 @@ const tabContents: Record<string, React.ReactNode> = {
     </div>
   ),
   "security-first": (
-    <div className="flex flex-col lg:flex-row gap-[24px]">
+    <div className="flex flex-col lg:flex-row lg:items-center gap-[24px]">
       <div className="relative lg:w-[396px] h-[333px] w-full">
         <Image
           src={img1}
@@ -125,7 +125,7 @@ const tabContents: Record<string, React.ReactNode> = {
           className="object-fit w-full h-full"
         />
       </div>
-      <div className="flex flex-col gap-[15px] w-[330px]">
+      <div className="flex flex-col gap-[15px] lg:w-[330px] w-full">
         <SolutionText className="text-[14px]">
           HR and Workforce Applications
         </SolutionText>

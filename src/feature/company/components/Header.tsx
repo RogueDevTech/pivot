@@ -28,13 +28,13 @@ const Header = () => {
             layer for the global economy
           </p>
         </div>
-        <div className="flex flex-col h-full lg:h-[296px] lg:flex-row gap-[16px]">
+        <div className="flex h-full lg:h-[296px] flex-row gap-[16px]">
           <div className="relative w-full">
             <Image
               src={com1}
               fill
               alt="com"
-              className="object-cover w-full h-full"
+              className="lg:object-cover object-contain w-full h-full"
             />
           </div>
           <div className="flex flex-col justify-between h-auto">
@@ -46,7 +46,7 @@ const Header = () => {
                 className="object-cover w-full h-full"
               />
             </div>
-            <div className="relative w-full h-[126px] w-full lg:w-[213px]">
+            <div className="relative w-[150px] h-[126px] lg:w-[213px]">
               <Image
                 src={com3}
                 fill

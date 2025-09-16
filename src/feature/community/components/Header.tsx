@@ -11,7 +11,7 @@ import Minisize from "@/components/Minisize";
 
 const Header = () => {
   return (
-    <section className="flex flex-col flex-[32px] w-full lg:w-[729px]">
+    <section className="flex flex-col gap-[32px] w-full lg:w-[729px]">
       <div className="flex flex-col gap-[32px]">
         <div className="flex flex-col gap-[24px]">
           <h3>Bridging the Gap by Pivot Labs</h3>
@@ -24,13 +24,13 @@ const Header = () => {
           </InnerText>
           <Button>Join Community</Button>
         </div>
-        <div className="flex flex-col lg:flex-row w-full w-[729px] justify-between gap-[16px]">
+        <div className="flex flex-row w-full lg:w-[729px] justify-between gap-[16px]">
           <div className="relative w-full lg:w-[237px] h-[364px]">
             <Image
               src={com1}
               fill
               alt="com"
-              className="object-cover w-full h-full"
+              className="lg:object-cover object-contain w-full h-full"
             />
           </div>
           <div className="relative w-full lg:w-[237px] h-[364px]">
@@ -38,7 +38,7 @@ const Header = () => {
               src={com2}
               fill
               alt="com"
-              className="object-cover w-full h-full"
+              className="lg:object-cover object-contain w-full h-full"
             />
           </div>
           <div className="relative w-full lg:w-[237px] h-[364px]">
@@ -46,13 +46,13 @@ const Header = () => {
               src={com3}
               fill
               alt="com"
-              className="object-cover w-full h-full"
+              className="lg:object-cover object-contain w-full h-full"
             />
           </div>
         </div>
       </div>
       <div className="flex flex-col gap-[32px]">
-        <div className="flex flex-col gap-[32px]">
+        <div className="flex flex-col lg:gap-[32px] gap-[14px]">
           <Bigger>Learn and Grow Together</Bigger>
           <div className="grid grid-cols-1 lg:grid-cols-2 w-full lg:w-[729px]">
             <div className="flex flex-col gap-[24px]">

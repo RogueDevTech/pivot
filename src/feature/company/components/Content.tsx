@@ -60,16 +60,16 @@ const Content = () => {
                 src={com4}
                 fill
                 alt="com"
-                className="object-fit w-full h-full"
+                className="object-cover w-full h-full"
               />
             </div>
             <div className="flex flex-col lg:flex-row justify-between gap-[8px]">
-              <div className="relative w-full h-[] lg:w-[]">
+              <div className="relative w-full h-[206px] lg:w-[437px]">
                 <Image
                   src={com5}
                   fill
                   alt="com"
-                  className="object-fit w-full h-full"
+                  className="object-cover w-full h-full"
                 />
               </div>
               <div className="flex flex-col justify-between gap-[8px]">
@@ -78,7 +78,7 @@ const Content = () => {
                     src={com6}
                     fill
                     alt="com"
-                    className="object-fit w-full h-full"
+                    className="object-cover w-full h-full"
                   />
                 </div>
                 <div className="relative w-full h-[99px] lg:w-[285px]">
@@ -86,7 +86,7 @@ const Content = () => {
                     src={com7}
                     fill
                     alt="com"
-                    className="object-fit w-full h-full"
+                    className="object-cover w-full h-full"
                   />
                 </div>
               </div>

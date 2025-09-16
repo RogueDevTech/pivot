@@ -19,13 +19,13 @@ const Header = () => {
         </p>
       </div>
       <div className="flex flex-col lg:flex-row items-center gap-[24px] w-[100%]">
-        <div className="border-1 border-[#ffffff] px-6 py-6 flex flex-col justify-between w-[360px] h-[632px]">
+        <div className="border-1 border-[#ffffff] px-6 py-6 flex flex-col justify-between w-full lg:w-[360px] h-[632px]">
           <div className="flex flex-col gap-[24px]">
             <h3 className="text-[20px] leading-[36px] font-medium text-[#ffffff] font-500">
               Avery AI
             </h3>
             <div className="flex flex-col gap-[24px]">
-              <p className="h-[72px] text-[#9EA3A2] tracking-normal leading-[100%] w-[304px]">
+              <p className="h-[72px] text-[#9EA3A2] tracking-normal leading-[100%] w-full lg:w-[304px]">
                 Design is the backbone of every product. Avery AI is redefining
                 how businesses create, manage, and scale design systems by
                 bringing intelligence and adaptability into the mix
@@ -66,13 +66,13 @@ const Header = () => {
             />
           </div>
         </div>
-        <div className="border-1 border-[#ffffff] px-6 py-6 flex flex-col justify-between w-[360px] h-[632px]">
+        <div className="border-1 border-[#ffffff] px-6 py-6 flex flex-col justify-between w-full lg:w-[360px] h-[632px]">
           <div className="flex flex-col gap-[24px]">
             <h3 className="text-[20px] leading-[36px] font-medium text-[#ffffff] font-500">
               Gods Eye
             </h3>
             <div className="flex flex-col gap-[24px]">
-              <p className="h-[72px] text-[#9EA3A2] tracking-normal leading-[100%] w-[304px]">
+              <p className="h-[72px] text-[#9EA3A2] tracking-normal leading-[100%] w-full lg:w-[304px]">
                 Our API provides developers with powerful identity intelligence
                 capabilities through simple, scalable endpoints. Built with
                 advanced AI and computer vision.
