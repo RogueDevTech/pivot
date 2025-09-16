@@ -126,7 +126,7 @@ const Boundaries: React.FC = () => {
               />
             </div>
             <div className="flex flex-col gap-[16px]">
-              <p className="text-[#9EA3A2] text-[12px] leading-[180%] tracking-[0%] text-400 font-regular">
+              <p className="text-[#9EA3A2] lg:text-[12px] text-[14px] leading-[180%] tracking-[0%] text-400 font-regular">
                 {item.date}
               </p>
               <h5 className="leading-[100%] tracking-[0%] text-[16px] font-medium text-[#ffffff] group-hover:text-blue-400 transition-colors">

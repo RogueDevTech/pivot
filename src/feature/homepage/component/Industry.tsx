@@ -7,14 +7,14 @@ import Paragraph from "@/components/Paragraph";
 
 const Industry = () => {
   return (
-    <section className="flex flex-col gap-[32px]">
+    <section className="flex flex-col gap-[32px] lg:w-[729px] w-full">
       <div className="flex flex-col gap-[16px]">
         <Text>Solutions/Products</Text>
         <div className="flex flex-col gap-[24px]">
           <h3 className=" text-[#FFFFFF] leading-[36px] tracking-normal text-[28px] text-400 font-medium">
             AI Solutions Built for Your Industry
           </h3>
-          <p className="text-[#9EA3A2] leading-[180%] tracking-normal text-[14px] w-[728px]">
+          <p className="text-[#9EA3A2] leading-[180%] tracking-normal text-[14px] lg:w-[728px] w-full">
             From fraud detection in fintech to medical imaging in healthcare,
             Pivot Labs provides industry-specific AI capabilities that solve
             real business problems. Deploy proven solutions in days, not months.
@@ -48,7 +48,7 @@ const Industry = () => {
             />
           </div>
           <div className="flex flex-col gap-3">
-            <Paragraph className="w-[329px] text-[#ffffff]">
+            <Paragraph className="lg:w-[329px] w-full text-[#ffffff]">
               Solving crowd identity search and verification in groups
             </Paragraph>
             <Text>APIs</Text>

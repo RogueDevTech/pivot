@@ -1,23 +1,22 @@
 // components/Text.tsx
-import React from 'react';
+import React from "react";
 
 interface TextProps {
   children: React.ReactNode;
-  as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p';
+  as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p";
   className?: string;
 }
 
-const Text: React.FC<TextProps> = ({ 
-  children, 
-  as: Component = 'p', 
-  className = '' 
+const Text: React.FC<TextProps> = ({
+  children,
+  as: Component = "p",
+  className = "",
 }) => {
-  const baseClasses = 'text-[#9EA3A2] leading-[100%] tracking-normal font-regular';
-  
+  const baseClasses =
+    "text-[#9EA3A2] leading-[100%] lg:text-[14px] text-[16px] tracking-normal font-regular";
+
   return (
-    <Component className={`${baseClasses} ${className}`}>
-      {children}
-    </Component>
+    <Component className={`${baseClasses} ${className}`}>{children}</Component>
   );
 };
 

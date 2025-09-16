@@ -29,7 +29,7 @@ const Header = () => {
             src={pic1}
             fill
             alt="pic"
-            className="object-fit w-full h-full"
+            className="lg:object-cover object-contain w-full h-full"
           />
         </div>
         <div className="flex flex-col justify-between gap-[16px]">
@@ -38,7 +38,7 @@ const Header = () => {
               src={pic2}
               fill
               alt="pic"
-              className="object-fit w-full h-full"
+              className="lg:object-cover object-contain w-full h-full"
             />
           </div>
           <div className="relative lg:w-[237px] w-full h-[177px]">
@@ -46,7 +46,7 @@ const Header = () => {
               src={pic3}
               fill
               alt="pic"
-              className="object-fit w-full h-full"
+              className="lg:object-cover object-contain w-full h-full"
             />
           </div>
         </div>
@@ -55,7 +55,7 @@ const Header = () => {
             src={pic4}
             fill
             alt="pic"
-            className="object-fit w-full h-full"
+            className="lg:object-cover object-contain w-full h-full"
           />
         </div>
       </div>

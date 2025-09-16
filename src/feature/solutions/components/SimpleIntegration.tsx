@@ -24,13 +24,8 @@ const SimpleIntegration = () => {
         <SolutionText className="text-[20px]">
           Simple Integration, Powerful Results
         </SolutionText>
-        <div className="relative w-[729px] h-[495px]">
-          <Image
-            src={img3}
-            fill
-            alt="img"
-            className="object-fit w-full h-full"
-          />
+        <div className="relative lg:w-[729px] w-[100%] lg:h-[495px] h-[350px]">
+          <Image src={img3} fill alt="img" className="object-contain" />
         </div>
       </div>
       <div className="flex flex-col gap-[32px]">

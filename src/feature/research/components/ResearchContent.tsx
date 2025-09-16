@@ -111,7 +111,7 @@ export const DynamicMultiModelContent: React.FC = () => (
         optimal performance.
       </p>
 
-      <h3 className="text-[#FFFFFF] leading-[36px] tracking-[0%] text-[14px] text-500 font-medium font-medium mb-2">
+      <h3 className="text-[#FFFFFF] leading-[36px] tracking-[0%] text-[14px] text-500  font-medium mb-2">
         2.2 AI System Orchestration
       </h3>
       <p className="mb-4 text-[#9EA3A2] leading-[180%] text-[14px] tracking-[0%]">
@@ -135,40 +135,7 @@ export const DynamicMultiModelContent: React.FC = () => (
       </p>
     </section>
 
-    {/* 3. System Architecture */}
-    {/* <section className="mb-12">
-      <h2 className="text-2xl font-semibold mb-4">3. System Architecture</h2>
-
-      <h3 className="text-xl font-medium mb-2">3.1 Overview</h3>
-      <p className="mb-4">
-        Our dynamic multi-model orchestration system consists of five key
-        components:
-      </p>
-      <ul className="list-disc list-inside space-y-2 mb-4">
-        <li>
-          Request Router: Analyzes incoming requests and determines optimal
-          model routing
-        </li>
-        <li>
-          Model Registry: Maintains metadata about available models and their
-          capabilities
-        </li>
-        <li>
-          Resource Manager: Dynamically allocates computational resources based
-          on demand
-        </li>
-        <li>
-          Performance Monitor: Tracks model performance and system health in
-          real-time
-        </li>
-        <li>
-          Optimization Engine: Uses machine learning to continuously improve
-          routing decisions
-        </li>
-      </ul>
-    </section> */}
     <section className="">
-      {/* 3. System Architecture */}
       <h2 className=" mb-6 text-[#FFFFFF] leading-[36px] tracking-[0%] text-[20px] text-500 font-medium">
         3. System Architecture
       </h2>
@@ -203,8 +170,6 @@ export const DynamicMultiModelContent: React.FC = () => (
           </li>
         </ul>
       </div>
-
-      {/* 3.2 Request Router */}
       <div className="mb-10">
         <h3 className="text-[#FFFFFF] leading-[36px] tracking-[0%] text-[20px] text-500 font-medium mb-4">
           3.2 Request Router
@@ -236,7 +201,7 @@ export const DynamicMultiModelContent: React.FC = () => (
             based on:
           </span>
         </h4>
-        <ul className="list-disc list-inside pl-[10px] list-disc list-inside text-[#9EA3A2] leading-[180%] text-[14px] tracking-[0%] space-y-2 mb-4">
+        <ul className="list-disc list-inside pl-[10px] text-[#9EA3A2] leading-[180%] text-[14px] tracking-[0%] space-y-2 mb-4">
           <li>Current performance metrics (latency, accuracy, throughput)</li>
           <li>Resource availability and queue depth</li>
           <li>Historical performance for similar requests</li>
@@ -250,7 +215,7 @@ export const DynamicMultiModelContent: React.FC = () => (
             weighted round-robin algorithm that considers:
           </span>
         </h4>
-        <ul className="list-disc list-inside pl-[10px] list-disc list-inside text-[#9EA3A2] leading-[180%] text-[14px] tracking-[0%]  space-y-2">
+        <ul className="list-disc list-inside pl-[10px] text-[#9EA3A2] leading-[180%] text-[14px] tracking-[0%]  space-y-2">
           <li>Current instance load</li>
           <li>Geographic proximity to reduce network latency</li>
           <li>Model warm-up status and caching efficiency</li>
@@ -260,12 +225,12 @@ export const DynamicMultiModelContent: React.FC = () => (
         <h3 className="text-[#FFFFFF] leading-[36px] tracking-[0%] text-[14px] text-500 mb-4">
           3.3 Model Registry
         </h3>
-        <div className="relative h-[291px] my-[24px] w-full">
+        <div className="relative lg:h-[291px] h-[180px] my-[24px] w-full">
           <Image
             src={imgone}
             alt="img"
             fill
-            className="w-full h-full object-fit"
+            className="w-full h-full lg:object-cover object-contain"
           />
         </div>
         <ul className="list-disc list-inside text-[#9EA3A2] leading-[180%] text-[14px] tracking-[0%] space-y-2">
@@ -295,7 +260,7 @@ export const DynamicMultiModelContent: React.FC = () => (
           resources:
         </p>
 
-        <h4 className="text-[#FFFFFF] leading-[36px] tracking-[0%] text-[14px] text-500 mb-4 mb-2">
+        <h4 className="text-[#FFFFFF] leading-[36px] tracking-[0%] text-[14px] text-500 mb-4 ">
           Auto-Scaling:
           <span className="mb-4 text-[#9EA3A2] leading-[180%] text-[14px] tracking-[0%]">
             {" "}
@@ -304,15 +269,15 @@ export const DynamicMultiModelContent: React.FC = () => (
             using historical patterns and current trends.
           </span>
         </h4>
-        <div className="relative h-[187px] w-full lg:w-[690px]">
+        <div className="relative lg:h-[187px] h-[130px] w-full lg:w-[690px]">
           <Image
             src={imgtwo}
             fill
             alt="img"
-            className="object-fit w-full h-full"
+            className="lg:object-cover object-contain w-full h-full"
           />
         </div>
-        <h4 className=" mb-2 text-[#FFFFFF] leading-[36px] tracking-[0%] text-[14px] text-500 mb-4">
+        <h4 className=" text-[#FFFFFF] leading-[36px] tracking-[0%] text-[14px] text-500 mb-4">
           Resource Pooling:
         </h4>
         <p className="mb-4 text-[#9EA3A2] leading-[180%] text-[14px] tracking-[0%]">
@@ -412,12 +377,12 @@ export const DynamicMultiModelContent: React.FC = () => (
           models built with different frameworks (PyTorch, TensorFlow, JAX) and
           deployment patterns.
         </p>
-        <div className="relative h-[339px] w-full">
+        <div className="relative lg:h-[339px] h-[260px] w-full">
           <Image
             src={imgthree}
             fill
             alt="img"
-            className="object-cover w-full h-full"
+            className="lg:object-cover object-contain w-full h-full"
           />
         </div>
       </div>
@@ -554,8 +519,6 @@ export const DynamicMultiModelContent: React.FC = () => (
           </li>
         </ul>
       </div>
-
-      {/* 5.4 Real-World Case Studies */}
       <div>
         <h3 className="text-[#FFFFFF] leading-[36px] tracking-[0%] text-[14px] text-500 mb-4">
           5.4 Real-World Case Studies
@@ -888,7 +851,7 @@ export const PrivacyPreservingContent: React.FC = () => (
             src={imgtwo}
             fill
             alt="img"
-            className="object-cover w-full h-full"
+            className="lg:object-cover object-contain w-full h-full"
           />
         </div>
         <InnerText>
@@ -1123,45 +1086,6 @@ export const PrivacyPreservingContent: React.FC = () => (
 );
 
 export const DynamicInfrastructureContent: React.FC = () => (
-  // <div className="prose prose-invert max-w-none">
-  //   <h1>Dynamic Infrastructure for Scalable AI Systems</h1>
-  //   <p className="text-gray-400 text-sm">17 March 2025</p>
-
-  //   <h2>Abstract</h2>
-  //   <p>
-  //     Modern AI workloads demand flexible, scalable infrastructure capable of
-  //     supporting diverse model types and rapid deployment cycles. Our dynamic
-  //     infrastructure framework leverages container orchestration, automated
-  //     scaling, and real-time monitoring to optimize resource utilization and
-  //     system reliability for enterprise AI applications.
-  //   </p>
-
-  //   <h2>Approach</h2>
-  //   <p>
-  //     We designed a cloud-native infrastructure stack using Kubernetes, GPU
-  //     scheduling, and distributed monitoring. The system automatically
-  //     provisions resources based on workload demand, supports seamless model
-  //     updates, and integrates with popular AI frameworks for rapid
-  //     experimentation and deployment.
-  //   </p>
-
-  //   <h2>Enterprise Applications</h2>
-  //   <p>This infrastructure enables:</p>
-  //   <ul>
-  //     <li>Real-time analytics for financial services</li>
-  //     <li>Scalable image and video processing for media platforms</li>
-  //     <li>Automated model deployment for healthcare diagnostics</li>
-  //     <li>Dynamic resource allocation for retail recommendation engines</li>
-  //   </ul>
-
-  //   <h2>Results</h2>
-  //   <p>
-  //     Our benchmarks show up to 70% improvement in resource efficiency and
-  //     99.99% system uptime across multiple production deployments, enabling
-  //     enterprises to scale AI workloads without compromising performance or
-  //     reliability.
-  //   </p>
-  // </div>
   <div className="flex flex-col gap-[32px] w-full lg:w-[729px">
     <section className="flex flex-col gap-[24px]">
       <Bigger>Abstract</Bigger>
@@ -1252,12 +1176,12 @@ export const DynamicInfrastructureContent: React.FC = () => (
           integration with multiple sources including grid operator APIs,
           third-party services, local monitoring, and weather-based forecasting.
         </InnerText>
-        <div className="relative w-full h-[231px]">
+        <div className="relative w-full lg:h-[231px] h-[180px]">
           <Image
             src={img4}
             fill
             alt="img"
-            className="object-cover w-full h-full"
+            className="lg:object-cover object-contain w-full h-full"
           />
         </div>
         <InnerText>
@@ -1274,12 +1198,12 @@ export const DynamicInfrastructureContent: React.FC = () => (
             latency maintenance, carbon intensity minimization, renewable energy
             utilization, and load distribution prevention of hotspots.
           </InnerText>
-          <div className="relative w-full h-[409px]">
+          <div className="relative w-full lg:h-[409px] h-[280px]">
             <Image
               src={img5}
               fill
               alt="img"
-              className="object-cover w-full h-full"
+              className="lg:object-cover object-contain w-full h-full"
             />
           </div>
           <InnerText>
@@ -1298,12 +1222,12 @@ export const DynamicInfrastructureContent: React.FC = () => (
           models during daylight and model compression during high-carbon
           periods.
         </InnerText>
-        <div className="relative w-full h-[281px]">
+        <div className="relative w-full lg:h-[281px] h-[235px]">
           <Image
             src={img6}
             fill
             alt="img"
-            className="object-cover w-full h-full"
+            className="lg:object-cover object-contain w-full h-full"
           />
         </div>
       </div>

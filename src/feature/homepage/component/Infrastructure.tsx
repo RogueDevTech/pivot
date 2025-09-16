@@ -12,10 +12,10 @@ const Infrastructure = () => {
   return (
     <section className="flex flex-col gap-[32px]">
       <div className="flex flex-col gap-[24px]">
-        <Paragraph className="text-[#FFFFFF] w-[465px] text-[28px]">
+        <Paragraph className="text-[#FFFFFF] lg:w-[465px] w-full text-[28px]">
           Build the Future of AI Infrastructure
         </Paragraph>
-        <Text className="w-[729px]">
+        <Text className="lg:w-[729px] w-full">
           Join team of talented engineers, researchers, and innovators who are
           making AI accessible to developers worldwide. Work on technology that
           powers breakthrough applications across every industry. Lets push the

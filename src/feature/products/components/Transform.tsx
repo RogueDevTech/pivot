@@ -58,7 +58,7 @@ const Transform = () => {
   return (
     <section className="flex flex-col gap-[64px]">
       <div className="flex flex-col gap-[32px]">
-        <div className=" flex flex-col gap-[5px] w-[729px]">
+        <div className=" flex flex-col gap-[5px] lg:w-[729px] w-full">
           <Paragraph className=" text-[20px] text-[#ffffff]">
             Transforming Design from Creation to Intelligence
           </Paragraph>
@@ -81,11 +81,11 @@ const Transform = () => {
             Federated learning makes Avery AI stronger with every design
             decision.
           </h3>
-          <div className="md:grid-cols-2 grid sm:grid-cols-1  lg:grid-cols-3 justify-between w-full lg:w-[729px]">
+          <div className="md:grid-cols-2 grid sm:grid-cols-1 lg:grid-cols-3 justify-between gap-[16px] lg:gap-[5px] w-full lg:w-[729px]">
             {list.map((feat, index) => (
               <div
                 key={index}
-                className="flex flex-col justify-between gap-[16px] w-[216px]"
+                className="flex flex-col justify-between gap-[16px] lg:w-[216px] w-full"
               >
                 <Paragraph className="text-[#ffffff] text-[16px]">
                   {feat.txt}

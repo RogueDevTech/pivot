@@ -49,7 +49,7 @@ const Content: React.FC = () => {
         <h2 className="text-[#FFFFFF] leading-[36px] text-[28px] font-medium">
           Advancing the Future of AI Infrastructure
         </h2>
-        <p className="text-[#9EA3A2] font-regular leading-[180%] text-[14px] w-[728px]">
+        <p className="text-[#9EA3A2] font-regular leading-[180%] text-[14px] w-full lg:w-[728px]">
           Our research drives breakthrough innovations in AI performance,
           efficiency and accessibility. We publish our findings and carefully
           tie to the open-source community to accelerate progress for everyone.
