@@ -12,7 +12,7 @@ const InnerText: React.FC<TextProps> = ({
   className = "",
 }) => {
   const baseClasses =
-    "font-medium text-[#9EA3A2] text-[14px] leading-[180%] tracking-[0%] align-middle";
+    "font-normal text-[#9EA3A2] text-[14px] leading-[180%] tracking-[0%]";
 
   return <Bigger className={`${baseClasses} ${className}`}>{children}</Bigger>;
 };

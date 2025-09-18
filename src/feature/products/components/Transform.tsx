@@ -87,9 +87,9 @@ const Transform = () => {
                 key={index}
                 className="flex flex-col justify-between gap-[16px] lg:w-[216px] w-full"
               >
-                <Paragraph className="text-[#ffffff] text-[16px]">
+                <p className="font-medium leading-[100%] tracking-[0%] text-[#ffffff] text-[16px]">
                   {feat.txt}
-                </Paragraph>
+                </p>
                 <Text className="text-[14px] leading-[180%]">
                   {feat.paragraph}
                 </Text>
@@ -105,9 +105,9 @@ const Transform = () => {
         <div className="flex flex-col gap-[32px] w-full lg:w-[729px]">
           {item.map((feat, index) => (
             <div key={index} className="flex flex-col gap-[16px]">
-              <Paragraph className="text-[#ffffff text-[16px]">
+              <p className="font-medium text-[18px] leading-[100%] tracking-[0%] text-[#ffffff]">
                 {feat.header}
-              </Paragraph>
+              </p>
               <ul className="flex flex-col gap-[16px]">
                 <li>
                   <Text className="leading-[180%] text-[14px]">

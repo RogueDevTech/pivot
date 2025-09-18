@@ -12,19 +12,37 @@ const Hero = () => {
       <div className="flex flex-col gap-[32px]">
         <div className="flex flex-col gap-[12px]">
           <Text>Partners</Text>
-
           <h2 className="text-[#ffffff] leading-[36px] text-[28px] font-meduim lg:w-[616px] w-full">
             Trusted by Companies Building the Future of AI
           </h2>
-          <p className="lg:w-[728px] w-full text-400 font-Regular leading-[180%] text-[14px] tracking-normal text-[#9EA3A2]">
+          <p className="lg:w-[728px] w-full text-400 font-Regular leading-[180%] text-[14.4px] tracking-[0%] text-[#9EA3A2]">
             From fast-growing startups to Fortune 500 enterprises, developers
             choose Pivot Labs to power their most critical AI features.
           </p>
           <Button> Become a Partner</Button>
         </div>
 
-        <div className="flex flex-row gap-8 w-fit">
-          <div className=" relative lg:w-[483px] h-[318px] w-[200px]">
+        {/* <div className="flex flex-col lg:flex-row gap-8 w-fit">
+          <div className=" relative lg:w-[483px] h-[318px] w-[100%]">
+            <Image
+              src={img7}
+              fill
+              alt="AI Technology"
+              className="lg:object-cover object-contain"
+            />
+          </div>
+          <div className="relative lg:w-[237px] h-[318px] w-[100%]">
+            <Image
+              src={img8}
+              fill
+              alt="AI Development"
+              className="lg:object-cover object-contain"
+            />
+          </div>
+        </div> */}
+        <div className="flex flex-col lg:flex-row gap-8 w-full">
+          {/* First image */}
+          <div className="relative w-full h-[250px] lg:w-[483px] lg:h-[318px]">
             <Image
               src={img7}
               fill
@@ -32,7 +50,7 @@ const Hero = () => {
               className="object-cover"
             />
           </div>
-          <div className="relative lg:w-[237px] h-[318px] w-[200px]">
+          <div className="relative w-full h-[250px] lg:w-[237px] lg:h-[318px]">
             <Image
               src={img8}
               fill
@@ -41,6 +59,7 @@ const Hero = () => {
             />
           </div>
         </div>
+
         <Logo />
       </div>
     </section>

@@ -49,12 +49,12 @@ const Content: React.FC = () => {
         <h2 className="text-[#FFFFFF] leading-[36px] text-[28px] font-medium">
           Advancing the Future of AI Infrastructure
         </h2>
-        <p className="text-[#9EA3A2] font-regular leading-[180%] text-[14px] w-full lg:w-[728px]">
+        <p className="text-[#9EA3A2] font-regular leading-[180%] text-[14.4px] tracking-[0%] w-full lg:w-[728px]">
           Our research drives breakthrough innovations in AI performance,
-          efficiency and accessibility. We publish our findings and carefully
-          tie to the open-source community to accelerate progress for everyone.
+          efficiency, and accessibility. We publish our findings and contribute
+          to the open-source community to accelerate progress for everyone.
         </p>
-        <Button> Read More</Button>
+        <Button>Read More</Button>
       </section>
 
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-fit gap-[8px]">

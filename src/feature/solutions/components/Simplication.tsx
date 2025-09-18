@@ -33,7 +33,7 @@ const tabContents: Record<string, React.ReactNode> = {
         <SolutionText className="text-[14px]">
           HR and Workforce Applications
         </SolutionText>
-        <p className="text-[#9EA3A2] leading-[180%] tracking-[0%] text-400 font-regular">
+        <p className="text-[#9EA3A2] leading-[180%] tracking-[0%] font-normal text-[14px]">
           Add fraud-proof attendance tracking to your HR platform. Enable
           employees to check in using facial recognition while providing
           managers with real-time attendance insights and anomaly detection.
@@ -65,7 +65,7 @@ const tabContents: Record<string, React.ReactNode> = {
         <SolutionText className="text-[14px]">
           HR and Workforce Applications
         </SolutionText>
-        <p className="text-[#9EA3A2] leading-[180%] tracking-[0%] text-400 font-regular">
+        <p className="text-[#9EA3A2] leading-[180%] tracking-[0%] text-400 font-normal text-[14px]">
           Add fraud-proof attendance tracking to your HR platform. Enable
           employees to check in using facial recognition while providing
           managers with real-time attendance insights and anomaly detection.
@@ -97,7 +97,7 @@ const tabContents: Record<string, React.ReactNode> = {
         <SolutionText className="text-[14px]">
           HR and Workforce Applications
         </SolutionText>
-        <p className="text-[#9EA3A2] leading-[180%] tracking-[0%] text-400 font-regular">
+        <p className="text-[#9EA3A2] leading-[180%] tracking-[0%] text-400 font-normal text-[14px]">
           Add fraud-proof attendance tracking to your HR platform. Enable
           employees to check in using facial recognition while providing
           managers with real-time attendance insights and anomaly detection.
@@ -129,7 +129,7 @@ const tabContents: Record<string, React.ReactNode> = {
         <SolutionText className="text-[14px]">
           HR and Workforce Applications
         </SolutionText>
-        <p className="text-[#9EA3A2] leading-[180%] tracking-[0%] text-400 font-regular">
+        <p className="text-[#9EA3A2] leading-[180%] tracking-[0%] text-400 font-normal text-[14px]">
           Add fraud-proof attendance tracking to your HR platform. Enable
           employees to check in using facial recognition while providing
           managers with real-time attendance insights and anomaly detection.

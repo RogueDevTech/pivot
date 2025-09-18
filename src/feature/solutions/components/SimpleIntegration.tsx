@@ -36,10 +36,10 @@ const SimpleIntegration = () => {
           <div className="flex flex-col gap-[24px]">
             {items.map((ftr, index) => (
               <div key={index} className="flex flex-col gap-[16px]">
-                <h4 className="text-[#FFFFFF] text-[16px] leading-[100%] tracking-[0%] font-meduim text-500">
+                <h4 className="text-[#FFFFFF] text-[16px] leading-[100%] tracking-[0%] font-meduim">
                   {ftr.header}
                 </h4>
-                <p className="text-[#9EA3A2] leading-[100%] tracking-[0%] text-[14px] font-regular text-400 w-full lg:w-[729px]">
+                <p className="text-[#9EA3A2] leading-[180%] tracking-[0%] text-[14px] font-normal w-full lg:w-[729px]">
                   {ftr.list}
                 </p>
               </div>

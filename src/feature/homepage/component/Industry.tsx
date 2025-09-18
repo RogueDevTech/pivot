@@ -23,10 +23,11 @@ const Industry = () => {
       </div>
       <div className="flex flex-col lg:flex-row gap-[16px]">
         <div className="flex flex-col gap-[20px]">
-          <div className="relative w-[360px] h-[298px]">
+          <div className="w-full lg:w-[360px] h-[298px]">
             <Image
               src={img8}
-              fill
+              width={500}
+              height={300}
               alt="img"
               className="object-fit w-full h-full"
             />
@@ -39,10 +40,11 @@ const Industry = () => {
           </div>
         </div>
         <div className="flex flex-col gap-[20px]">
-          <div className="relative w-[360px] h-[298px]">
+          <div className="w-full lg:w-[360px] h-[298px]">
             <Image
               src={img9}
-              fill
+              width={500}
+              height={300}
               alt="img"
               className="object-fit w-full h-full"
             />
