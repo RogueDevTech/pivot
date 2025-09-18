@@ -4,6 +4,7 @@ import Content from "./component/Content";
 import Hero from "./component/Hero";
 import Industry from "./component/Industry";
 import Infrastructure from "./component/Infrastructure";
+import Company from "./component/Company";
 
 const Homepage = () => {
   return (
@@ -12,6 +13,7 @@ const Homepage = () => {
       <Content />
       <Hero />
       <Industry />
+      <Company />
       <Infrastructure />
     </div>
   );

@@ -1,4 +1,4 @@
-// components/ResearchContent.tsx
+
 import React from "react";
 import imgone from "@/components/images/research/research-content.png";
 import imgtwo from "@/components/images/research/research-content-two.png";
