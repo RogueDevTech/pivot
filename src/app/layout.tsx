@@ -1,8 +1,8 @@
+
 import type { Metadata } from "next";
 import "../styles/globals.css";
 import Navbar from "../components/Navbar";
-import Sidebar from "../components/Sidebar";
-import Footer from "@/feature/homepage/component/Footer";
+import SidebarWrapper from "@/components/SidebarWrapper";
 
 export const metadata: Metadata = {
   title: "Scalable app",
@@ -18,15 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="bg-black text-white">
         <Navbar />
-        <div className="flex max-w-[1440px] mx-auto">
-          <Sidebar />
-          <main className="ml-0 md:ml-[300px] mt-[90px] mb-[32px] min-h-screen overflow-y-auto no-scrollbar px-4 md:px-12">
-            {children}
-            <div className="mt-[100px]">
-              <Footer />
-            </div>
-          </main>
-        </div>
+        <SidebarWrapper>{children}</SidebarWrapper>
       </body>
     </html>
   );

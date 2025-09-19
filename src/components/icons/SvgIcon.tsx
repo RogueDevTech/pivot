@@ -6,7 +6,6 @@ interface Props {
   onClick?: () => void;
 }
 
-
 export const Refund: React.FC<Props> = ({ className }) => (
   <svg
     className={className}
@@ -23,5 +22,20 @@ export const Refund: React.FC<Props> = ({ className }) => (
   </svg>
 );
 
-
-
+export const ToggleIcon: React.FC<Props> = ({ className }) => (
+  <svg
+    className={className}
+    width="16"
+    height="14"
+    viewBox="0 0 16 14"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M1.5 1.5H14.5V4.005H1.5V1.5ZM0 0H16V11.5C16 12.8807 14.8807 14 13.5 14H2.5C1.11929 14 0 12.8807 0 11.5V0ZM14.5 11.5C14.5 12.0523 14.0523 12.5 13.5 12.5H2.5C1.94772 12.5 1.5 12.0523 1.5 11.5V5.255H14.5V11.5Z"
+      fill="#ffffff"
+    />
+  </svg>
+);
