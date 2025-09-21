@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-black border-b border-[#292929]">
-      <div className="w-[80%] max-w-[1440px] mx-auto flex items-center h-[60px] px-4 md:px-8 justify-between">
+      <div className="w-[90%] md:w-[80%] max-w-[1440px] mx-auto flex items-center h-[60px] px-4 md:px-8 justify-between">
         <div className="flex items-center gap-2">
           <Image src={Logo} alt="logo" priority />
         </div>

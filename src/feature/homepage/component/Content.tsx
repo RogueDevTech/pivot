@@ -57,11 +57,11 @@ const Content: React.FC = () => {
         <Button>Read More</Button>
       </section>
 
-      <section className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-[8px]">
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-[16px]">
         <div>
           {researchCards.privacy.map((card) => (
-            <div key={card.id} className=" w-full flex flex-col gap-[8px]">
-              <div className="relative h-[364px] lg: w-[237px] w-full">
+            <div key={card.id} className="w-full flex flex-col gap-[12px]">
+              <div className="relative h-[250px] md:h-[300px] lg:h-[364px] w-full">
                 <Image
                   src={card.imageSrc}
                   alt="image"
@@ -69,7 +69,7 @@ const Content: React.FC = () => {
                   className="object-cover"
                 />
               </div>
-              <p className="lg:w-[219px] w-full text-[#ffffff] leading-[20px] text-[16px] tracking-normal font-medium">
+              <p className="w-full text-[#ffffff] leading-[20px] text-[16px] tracking-normal font-medium">
                 {card.title}
               </p>
             </div>
@@ -77,8 +77,8 @@ const Content: React.FC = () => {
         </div>
         <div>
           {researchCards.carbon.map((card) => (
-            <div key={card.id} className="flex flex-col gap-[8px]">
-              <div className="relative h-[176px] lg: w-[237px] w-full">
+            <div key={card.id} className="flex flex-col gap-[12px]">
+              <div className="relative h-[200px] md:h-[250px] lg:h-[176px] w-full">
                 <Image
                   src={card.imageSrc}
                   alt="image"
@@ -86,7 +86,7 @@ const Content: React.FC = () => {
                   className="object-cover"
                 />
               </div>
-              <p className="lg:w-[200px] text-[#ffffff] leading-[20px] w-full rotate-0 text-[16px] tracking-[0%] font-medium">
+              <p className="w-full text-[#ffffff] leading-[20px] text-[16px] tracking-[0%] font-medium">
                 {card.title}
               </p>
             </div>
@@ -94,8 +94,8 @@ const Content: React.FC = () => {
         </div>
         <div>
           {researchCards.dynamic.map((card) => (
-            <div key={card.id} className="flex flex-col gap-[8px]">
-              <div className="relative h-[295px] lg: w-[237px] w-full">
+            <div key={card.id} className="flex flex-col gap-[12px]">
+              <div className="relative h-[250px] md:h-[300px] lg:h-[295px] w-full">
                 <Image
                   src={card.imageSrc}
                   alt="image"
@@ -103,7 +103,7 @@ const Content: React.FC = () => {
                   className="object-cover"
                 />
               </div>
-              <p className="lg:w-[219px] w-full text-[#ffffff] leading-[20px] text-[16px] tracking-normal font-medium">
+              <p className="w-full text-[#ffffff] leading-[20px] text-[16px] tracking-normal font-medium">
                 {card.title}
               </p>
             </div>

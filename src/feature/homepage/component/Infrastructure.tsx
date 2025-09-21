@@ -1,4 +1,3 @@
-
 import React from "react";
 
 import Button from "@/components/Button";
@@ -23,18 +22,18 @@ const Infrastructure = () => {
         </p>
         <Button>Explore Roles</Button>
       </div>
-      <div className="flex gap-[10px] w-full">
-        <div className="relative w-full h-[285px]">
+      <div className="flex flex-col lg:flex-row gap-[16px] w-full">
+        <div className="relative w-full h-[200px] lg:h-[285px]">
           <Image src={img13} fill alt="img" className="object-cover" />
         </div>
-        <div className="relative w-full h-[285px]">
+        <div className="relative w-full h-[200px] lg:h-[285px]">
           <Image src={img14} fill alt="img" className="object-cover" />
         </div>
-        <div className="flex flex-col justify-between gap-[10px] w-full">
-          <div className="relative w-full h-[135px]">
+        <div className="flex flex-col lg:flex-row gap-[16px] w-full">
+          <div className="relative w-full h-[150px] lg:h-[135px]">
             <Image src={img15} fill alt="img" className="object-cover" />
           </div>
-          <div className="relative w-full h-[135px]">
+          <div className="relative w-full h-[150px] lg:h-[135px]">
             <Image src={img16} fill alt="img" className="object-cover" />
           </div>
         </div>

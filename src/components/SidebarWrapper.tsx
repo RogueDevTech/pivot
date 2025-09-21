@@ -15,7 +15,7 @@ export default function SidebarWrapper({
     <div className=" relative flex w-full">
       {/* Sidebar */}
       {visible && (
-        <div className=" w-[30%]">
+        <div className=" ">
           <Sidebar />
         </div>
       )}
