@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="bg-black text-white">
         <Navbar />
-        <div className="w-[80%] max-w-[1440px] mx-auto">
+        <div className="w-[100%] md:w-[80%] max-w-[1440px] mx-auto">
           <SidebarWrapper>{children}</SidebarWrapper>
         </div>
       </body>

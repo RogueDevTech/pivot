@@ -67,7 +67,7 @@ const Sidebar = () => {
       {/* Mobile Overlay */}
       {open && (
         <div
-          className="fixed inset-0 bg-black/50 z-30 md:hidden"
+          className=" fixed inset-0 bg-black/50 z-30 md:hidden"
           onClick={close}
         />
       )}
@@ -76,7 +76,7 @@ const Sidebar = () => {
       {visible && (
         <aside
           className={clsx(
-            " sticky top-[60px] h-[calc(100vh-60px)] w-full bg-black text-white flex flex-col shadow-lg border border-[#292929] overflow-y-auto no-scrollbar transition-transform z-40",
+            " sticky top-[60px] h-[calc(100vh-60px)] w-[300px] bg-black text-white flex flex-col shadow-lg border border-[#292929] overflow-y-auto no-scrollbar transition-transform z-40",
             "hidden md:flex"
           )}
         >
