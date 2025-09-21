@@ -27,7 +27,7 @@ We have active Employee Resource Groups, inclusive hiring practices, and maintai
     },
   ];
   return (
-    <section className="flex flex-col gap-[16px] w-full lg:w-[729px]">
+    <section className="flex flex-col gap-[32px] w-full lg:w-[729px]">
       <div className="flex lg:flex-row flex-col gap-[16px] justify-between">
         {array.map((ftr, index) => (
           <div
@@ -38,10 +38,10 @@ We have active Employee Resource Groups, inclusive hiring practices, and maintai
               <Image
                 src={ftr.img}
                 alt="img"
-                className="object-fit w-full h-full"
+                className="object-cover w-full h-full"
               />
             </div>
-            <div className="flex flex-col gap-[16px] justify-between h-auto border-2 border-[transparent]">
+            <div className="flex flex-col gap-[16px] justify-between h-auto">
               <Minisize className="">{ftr.header}</Minisize>
               <InnerText>{ftr.para}</InnerText>
             </div>

@@ -1,4 +1,3 @@
-
 import type { Metadata } from "next";
 import "../styles/globals.css";
 import Navbar from "../components/Navbar";
@@ -18,7 +17,9 @@ export default function RootLayout({
     <html lang="en">
       <body className="bg-black text-white">
         <Navbar />
-        <SidebarWrapper>{children}</SidebarWrapper>
+        <div className="w-[80%] max-w-[1440px] mx-auto">
+          <SidebarWrapper>{children}</SidebarWrapper>
+        </div>
       </body>
     </html>
   );

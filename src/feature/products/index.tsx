@@ -5,7 +5,10 @@ import IntelligentDesign from "./components/IntelligentDesign";
 
 const ProductPage = () => {
   return (
-    <div className="flex flex-col gap-[48px] w-full h-full">
+    <div
+      className="flex flex-col gap-[48px] w-full h-full"
+      style={{ margin: "0 auto" }}
+    >
       <Future />
       <Transform />
       <IntelligentDesign />

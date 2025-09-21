@@ -9,6 +9,13 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: "Geise", sans-serif; 
+  /* border: 2px solid blue; */
+  /* width: 80%;
+  margin: 0 auto; */
+}
+
+.debugger{
+  border: 1px solid red;
 }
 
 @font-face {

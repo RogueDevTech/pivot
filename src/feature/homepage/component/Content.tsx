@@ -43,13 +43,13 @@ const Content: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col justify-between gap-[48px]">
-      <section className="flex flex-col gap-[24px]">
+    <div className=" mt-6 flex flex-col justify-between gap-[25px] w-full mx-auto">
+      <section className="">
         <Text>Research</Text>
-        <h2 className="text-[#FFFFFF] leading-[36px] text-[28px] font-medium">
+        <h2 className="text-[#FFFFFF] mt-3 leading-[36px] text-[28px] font-medium">
           Advancing the Future of AI Infrastructure
         </h2>
-        <p className="text-[#9EA3A2] font-regular leading-[180%] text-[14.4px] tracking-[0%] w-full lg:w-[728px]">
+        <p className="text-[#9EA3A2] mt-1 mb-5 font-regular leading-[25px] text-[14px] max-w-[700px] tracking-[0%] w-full">
           Our research drives breakthrough innovations in AI performance,
           efficiency, and accessibility. We publish our findings and contribute
           to the open-source community to accelerate progress for everyone.
@@ -57,11 +57,11 @@ const Content: React.FC = () => {
         <Button>Read More</Button>
       </section>
 
-      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-fit gap-[8px]">
+      <section className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-[8px]">
         <div>
           {researchCards.privacy.map((card) => (
-            <div key={card.id} className="flex flex-col gap-[24px]">
-              <div className="relative h-[364px] lg:w-[237px] w-full">
+            <div key={card.id} className=" w-full flex flex-col gap-[8px]">
+              <div className="relative h-[364px] lg: w-[237px] w-full">
                 <Image
                   src={card.imageSrc}
                   alt="image"
@@ -69,7 +69,7 @@ const Content: React.FC = () => {
                   className="object-cover"
                 />
               </div>
-              <p className="lg:w-[219px] w-full text-[#ffffff] leading-[100%] text-[16px] tracking-normal font-medium">
+              <p className="lg:w-[219px] w-full text-[#ffffff] leading-[20px] text-[16px] tracking-normal font-medium">
                 {card.title}
               </p>
             </div>
@@ -77,8 +77,8 @@ const Content: React.FC = () => {
         </div>
         <div>
           {researchCards.carbon.map((card) => (
-            <div key={card.id} className="flex flex-col gap-[24px]">
-              <div className="relative h-[176px] lg:w-[237px] w-full">
+            <div key={card.id} className="flex flex-col gap-[8px]">
+              <div className="relative h-[176px] lg: w-[237px] w-full">
                 <Image
                   src={card.imageSrc}
                   alt="image"
@@ -86,7 +86,7 @@ const Content: React.FC = () => {
                   className="object-cover"
                 />
               </div>
-              <p className="lg:w-[200px] text-[#ffffff] leading-[100%] w-full rotate-0 text-[16px] tracking-[0%] font-medium">
+              <p className="lg:w-[200px] text-[#ffffff] leading-[20px] w-full rotate-0 text-[16px] tracking-[0%] font-medium">
                 {card.title}
               </p>
             </div>
@@ -94,8 +94,8 @@ const Content: React.FC = () => {
         </div>
         <div>
           {researchCards.dynamic.map((card) => (
-            <div key={card.id} className="flex flex-col gap-[24px]">
-              <div className="relative h-[284px] lg:w-[237px] w-full">
+            <div key={card.id} className="flex flex-col gap-[8px]">
+              <div className="relative h-[295px] lg: w-[237px] w-full">
                 <Image
                   src={card.imageSrc}
                   alt="image"
@@ -103,7 +103,7 @@ const Content: React.FC = () => {
                   className="object-cover"
                 />
               </div>
-              <p className="lg:w-[219px] w-full text-[#ffffff] leading-[100%] text-[16px] tracking-normal font-medium">
+              <p className="lg:w-[219px] w-full text-[#ffffff] leading-[20px] text-[16px] tracking-normal font-medium">
                 {card.title}
               </p>
             </div>

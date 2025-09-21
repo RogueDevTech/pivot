@@ -27,61 +27,62 @@ const IntelligentDesign = () => {
     },
   ];
   return (
-    <section className="flex flex-col gap-[32px]">
-      <div className="flex flex-col lg:flex-row items-center gap-[16px] h-full">
-        <div className="relative w-full h-full lg:w-[501px] lg:h-[296px]">
-          <Image src={prod1} fill alt="prod" className="w-full h-full" />
+    <section className="flex flex-col gap-[48px] w-full">
+      <div className="flex flex-col lg:flex-row items-center gap-[16px] w-full">
+        <div className="relative w-full lg:w-[70%] h-[296px]">
+          <Image src={prod1} fill alt="prod" className="object-cover" />
         </div>
-        <div className="flex flex-col justify-between">
-          <div className="relative w-full h-full lg:w-[219px] lg:h-[144px]">
-            <Image src={prod2} fill alt="prod" className="w-full h-full" />
+        <div className="flex flex-col justify-between gap-[16px] w-full lg:w-[30%]">
+          <div className="relative w-full h-[140px]">
+            <Image src={prod2} fill alt="prod" className="object-cover" />
           </div>
-          <div className="relative w-full h-full lg:w-[219px] lg:h-[144px]">
-            <Image src={prod3} fill alt="prod" className="w-full h-full" />
+          <div className="relative w-full h-[140px]">
+            <Image src={prod3} fill alt="prod" className="object-cover" />
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-[32px] justify-between h-auto">
+      <div className="flex flex-col gap-[32px] w-full">
         <div className="flex flex-col gap-[16px]">
-          <h4>The Power of Artificial General Intelligence in Design</h4>
-          <div className=" flex flex-col w-full lg:w-[729px]">
-            <p className="text-[#9EA3A2] text-[14px] leading-[180%] tracking-[0%] font-regular">
-              {" "}
+          <h3 className="w-full font-medium leading-[36px] text-[28px] tracking-[0%] text-[#ffffff]">
+            The Power of Artificial General Intelligence in Design
+          </h3>
+          <div className="flex flex-col gap-[16px] w-full">
+            <p className="text-[#9EA3A2] text-[14px] leading-[20px] tracking-[0%] font-regular">
               Avery AI leverages cutting-edge AGI capabilities that go far
               beyond pattern matching or rule-based analysis. The system
               demonstrates genuine understanding of design principles, user
               psychology, and business strategy. It can:
             </p>
-            <ul className="flex flex-col gap-[12px]">
-              <li>
-                <p className="text-[#9EA3A2] text-[14px] leading-[180%] tracking-[0%] font-regular">
+            <ul className="flex flex-col gap-[12px] pl-[16px]">
+              <li className="list-disc">
+                <p className="text-[#9EA3A2] text-[14px] leading-[20px] tracking-[0%] font-regular">
                   Reason About Design Intent: Understanding not just what
                   elements exist in a design, but why they were placed there and
                   how they contribute to the overall user journey
                 </p>
               </li>
-              <li>
-                <p className="text-[#9EA3A2] text-[14px] leading-[180%] tracking-[0%] font-regular">
+              <li className="list-disc">
+                <p className="text-[#9EA3A2] text-[14px] leading-[20px] tracking-[0%] font-regular">
                   Synthesize Complex Relationships: Connecting visual design
                   choices to business metrics, user satisfaction, and long-term
                   product success
                 </p>
               </li>
-              <li>
-                <p className="text-[#9EA3A2] text-[14px] leading-[180%] tracking-[0%] font-regular">
+              <li className="list-disc">
+                <p className="text-[#9EA3A2] text-[14px] leading-[20px] tracking-[0%] font-regular">
                   Adapt to Novel Contexts: Applying learned principles to
                   entirely new design challenges and industry verticals
                 </p>
               </li>
-              <li>
-                <p className="text-[#9EA3A2] text-[14px] leading-[180%] tracking-[0%] font-regular">
+              <li className="list-disc">
+                <p className="text-[#9EA3A2] text-[14px] leading-[20px] tracking-[0%] font-regular">
                   Learn from Minimal Data: Generating insights from limited
                   information, much like experienced designers do when
                   approaching new projects
                 </p>
               </li>
             </ul>
-            <p className="text-[#9EA3A2] text-[14px] leading-[180%] tracking-[0%] font-regular">
+            <p className="text-[#9EA3A2] text-[14px] leading-[20px] tracking-[0%] font-regular">
               This level of AI sophistication enables Avery AI to provide
               strategic guidance rather than just tactical feedback, making it
               an invaluable partner in the design process rather than simply
@@ -89,26 +90,23 @@ const IntelligentDesign = () => {
             </p>
           </div>
         </div>
-        <div className="flex flex-col gap-[32px] h-fit">
+        <div className="flex flex-col gap-[32px] w-full">
           {text.map((ftxt, index) => (
-            <div
-              key={index}
-              className="flex flex-col gap-[16px] w-full lg:w-[729px]"
-            >
-              <p className="text-[#ffffff] leading-[36px] text-[20px] font-medium">
+            <div key={index} className="flex flex-col gap-[16px] w-full">
+              <h3 className="w-full font-medium leading-[36px] text-[28px] tracking-[0%] text-[#ffffff]">
                 {ftxt.header}
-              </p>
-              <div className="flex flex-col gap-[24px]">
-                <p className="text-[#9EA3A2] text-[14px] leading-[180%] tracking-[0%] font-regular">
+              </h3>
+              <div className="flex flex-col gap-[16px]">
+                <p className="text-[#9EA3A2] text-[14px] leading-[20px] tracking-[0%] font-regular">
                   {ftxt.txtone}
                 </p>
-                <p className="text-[#9EA3A2] text-[14px] leading-[180%] tracking-[0%] font-regular">
+                <p className="text-[#9EA3A2] text-[14px] leading-[20px] tracking-[0%] font-regular">
                   {ftxt.txttwo}
                 </p>
-                <p className="text-[#9EA3A2] text-[14px] leading-[180%] tracking-[0%] font-regular">
+                <p className="text-[#9EA3A2] text-[14px] leading-[20px] tracking-[0%] font-regular">
                   {ftxt.txtthree}
                 </p>
-                <p className="text-[#9EA3A2] text-[14px] leading-[180%] tracking-[0%] font-regular">
+                <p className="text-[#9EA3A2] text-[14px] leading-[20px] tracking-[0%] font-regular">
                   {ftxt.txtfour}
                 </p>
               </div>

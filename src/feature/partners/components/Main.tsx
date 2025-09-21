@@ -66,8 +66,8 @@ const Main = () => {
     },
   ];
   return (
-    <section className="flex flex-col h-full gap-[24px] w-full lg:w-[729px]">
-      <div className="relative w-full lg:w-[729px] h-[347px]">
+    <section className=" flex flex-col gap-[10px] w-full ">
+      <div className=" relative w-full h-[347px]">
         <Image
           src={par1}
           fill
@@ -75,23 +75,22 @@ const Main = () => {
           className="object-cover w-full h-full"
         />
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 justify-between gap-[32px] w-full lg:w-[729px]">
+      <div className=" grid grid-cols-1 lg:grid-cols-2 gap-y-[25px] gap-x-[10px] w-full">
         {storage.map((ftr, index) => (
-          <div
-            key={index}
-            className="flex flex-col gap-[24px] justify-between h-auto"
-          >
-            <div className="relative lg:w-[359px] w-full h-[234px]">
+          <div key={index} className="flex flex-col gap-[10px] w-full">
+            <div className="relative w-full h-[234px]">
               <Image
                 src={ftr.img}
                 alt="ftr"
-                className="object-fit w-full h-full"
+                className="object-cover w-full h-full"
               />
             </div>
-            <InnerText>{ftr.text}</InnerText>
-            <p className="text-[#9EA3A2] leading-[180%] tracking-[0%] text-[14px] font-regular text-400">
-              {ftr.textone}
-            </p>
+            <div className="flex flex-col gap-[12px]">
+              <InnerText>{ftr.text}</InnerText>
+              <p className="text-[#ffffff] leading-[20px] tracking-[0%] text-[14px] font-regular hover:text-[#9EA3A2] transition-colors cursor-pointer">
+                {ftr.textone}
+              </p>
+            </div>
           </div>
         ))}
       </div>

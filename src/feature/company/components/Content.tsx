@@ -39,14 +39,14 @@ const Content = () => {
         <div className="flex flex-col gap-[16px]">
           <div className="flex flex-col gap-[8px]">
             <div>
-              <h3 className="text-[#ffffff] leading-[36px] text-[20px] tracking-[0%] font-meduim">
+              <h3 className="w-full font-medium leading-[36px] text-[20px] tracking-[0%] text-[#ffffff]">
                 Built for Scale,{" "}
               </h3>
-              <p className="text-[#ffffff] leading-[36px] text-[20px] tracking-[0%] font-meduim">
+              <p className="w-full font-medium leading-[36px] text-[20px] tracking-[0%] text-[#ffffff]">
                 Designed for Developers
               </p>
             </div>
-            <p className="text-[#9EA3A2] leading-[180%] tracking-[0%] text-[14px] font-400">
+            <p className="w-full leading-[25px] tracking-[0%] text-[#9EA3A2] text-[14px] font-regular">
               Our technology represents the culmination of 2+ years of R&D
               investment and is one of the most sophisticated AI infrastructure
               stacks in the industry. We have built our platform from the ground
@@ -94,20 +94,20 @@ const Content = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-[12px] mt-[24px]">
-        <h3 className="text-[#ffffff] leading-[36px] text-[20px] font-meduim">
+      <div className=" mt-[24px]">
+        <h3 className="w-full mt-3 font-medium leading-[36px] text-[20px] tracking-[0%] text-[#ffffff]">
           Our Values Drive Everything We Do
         </h3>
-        <div className="grid grid-cols-1 gap-[24px] w-full lg:w-[729px] lg:grid-cols-3 justify-between">
+        <div className="mt-5 grid grid-cols-1 gap-[24px] w-full lg:w-[729px] lg:grid-cols-3 justify-between">
           {content.map((ftr, index) => (
             <div
               key={index}
-              className="flex flex-col gap-[16px] w-full lg:w-[216px]"
+              className=" w-full lg:w-[216px]"
             >
-              <h3 className="text-[#ffffff] text-[16px] leading-[100%] tracling-[0%] text-500">
+              <h3 className="w-full mb-2 font-medium text-[14px] leading-[20px] tracking-[0%] text-[#ffffff]">
                 {ftr.header}
               </h3>
-              <p className="text-[#9EA3A2] leading-[180%] text-[14px] font-regular">
+              <p className="w-full max-w-[210px] leading-[25px] text-[#9EA3A2] text-[14px] font-regular">
                 {ftr.paragraph}
               </p>
             </div>

@@ -64,6 +64,7 @@ const Sidebar = () => {
 
   return (
     <>
+      {/* Mobile Overlay */}
       {open && (
         <div
           className="fixed inset-0 bg-black/50 z-30 md:hidden"
@@ -71,12 +72,12 @@ const Sidebar = () => {
         />
       )}
 
+      {/* Desktop Sidebar */}
       {visible && (
         <aside
           className={clsx(
-            "fixed top-[60px] h-[calc(100vh-60px)] w-[260px] bg-black text-white flex flex-col shadow-lg border-r border-[#292929] overflow-y-auto no-scrollbar transition-transform z-40",
-            open ? "translate-x-0" : "-translate-x-full",
-            "md:translate-x-0"
+            " sticky top-[60px] h-[calc(100vh-60px)] w-full bg-black text-white flex flex-col shadow-lg border border-[#292929] overflow-y-auto no-scrollbar transition-transform z-40",
+            "hidden md:flex"
           )}
         >
           <nav className="flex flex-col">
@@ -94,6 +95,26 @@ const Sidebar = () => {
                   <Link
                     href={item.path}
                     onClick={close}
+                    className={`flex text-[14px] items-center justify-between py-1 ${
+                      pathname === item.path
+                        ? "text-[#FFFFFF]"
+                        : "text-[#A1A1A1]"
+                    }`}
+                  >
+                    <span>{item.name}</span>
+                    {/* {activeItem === item.name && <ArrowIcon />} */}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            {/* Company */}
+            <ul className="px-6 py-5 space-y-4 border-b border-[#292929]">
+              {navItems.company.map((item) => (
+                <li key={item.name}>
+                  <Link
+                    href={item.path}
+                    onClick={close}
                     className={`flex items-center justify-between py-1 ${
                       pathname === item.path
                         ? "text-[#FFFFFF]"
@@ -102,6 +123,65 @@ const Sidebar = () => {
                   >
                     <span>{item.name}</span>
                     {activeItem === item.name && <ArrowIcon />}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            {/* Support */}
+            <ul className="px-6 py-5 space-y-4">
+              {navItems.support.map((item) => (
+                <li key={item.name}>
+                  <Link
+                    href={item.path}
+                    onClick={close}
+                    className={`flex items-center justify-between py-1 ${
+                      pathname === item.path
+                        ? "text-[#FFFFFF]"
+                        : "text-[#A1A1A1]"
+                    }`}
+                  >
+                    <span>{item.name}</span>
+                    {activeItem === item.name && <ArrowIcon />}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </aside>
+      )}
+
+      {/* Mobile Sidebar */}
+      {open && (
+        <aside
+          className={clsx(
+            "fixed top-[60px] left-0 h-[calc(100vh-60px)] w-[80%] max-w-[300px] bg-black text-white flex flex-col shadow-lg border border-[#292929] overflow-y-auto no-scrollbar transition-transform z-40",
+            open ? "translate-x-0" : "-translate-x-full",
+            "md:hidden"
+          )}
+        >
+          <nav className="flex flex-col">
+            <div className="px-6 py-5 border-b border-[#292929] sticky top-0 bg-black z-10">
+              <SearchInput
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+              />
+            </div>
+
+            {/* Main */}
+            <ul className="px-6 py-5 space-y-4 border-b border-[#292929]">
+              {navItems.main.map((item) => (
+                <li key={item.name}>
+                  <Link
+                    href={item.path}
+                    onClick={close}
+                    className={`flex text-[14px] items-center justify-between py-1 ${
+                      pathname === item.path
+                        ? "text-[#FFFFFF]"
+                        : "text-[#A1A1A1]"
+                    }`}
+                  >
+                    <span>{item.name}</span>
                   </Link>
                 </li>
               ))}
