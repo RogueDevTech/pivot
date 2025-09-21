@@ -4,7 +4,7 @@ import Main from './component/Main'
 
 const CareersPage = () => {
   return (
-    <div className='flex flex-col gap-[32px]'>
+    <div className=' flex flex-col gap-[32px]'>
         <Header/>
         <Main/>
 

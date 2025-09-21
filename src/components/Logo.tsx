@@ -18,7 +18,7 @@ const Logo = () => {
     height: number;
   }
   const logos: Logo[] = [
-    { src: log1, alt: "Spike", width: 81, height: 23 },
+    { src: log1, alt: "Spike", width: 91, height: 23 },
     { src: log2, alt: "CymStore", width: 144, height: 26 },
     { src: log3, alt: "CarrotCredit", width: 121, height: 30 },
     { src: log4, alt: "Zap Creative", width: 130, height: 27 },
@@ -29,16 +29,42 @@ const Logo = () => {
     { src: log9, alt: "Partner", width: 124, height: 27 },
   ];
   return (
-    <div className="flex gap-[16px] flex-wrap justify-between w-full lg:w-[719px]">
-      {logos.map((logo, index) => (
-        <div
-          key={index}
-          className="relative"
-          style={{ width: `${logo.width}px`, height: `${logo.height}px` }}
-        >
-          <Image src={logo.src} fill alt={logo.alt} className="object-cover" />
-        </div>
-      ))}
+    <div className=" flex flex-col gap-[25px] w-full lg:w-[719px]">
+      {/* First Row - 4 logos */}
+      <div className=" flex gap-[25px]">
+        {logos.slice(0, 4).map((logo, index) => (
+          <div
+            key={index}
+            className=" relative"
+            style={{ width: `${logo.width}px`, height: `${logo.height}px` }}
+          >
+            <Image
+              src={logo.src}
+              fill
+              alt={logo.alt}
+              className="object-cover"
+            />
+          </div>
+        ))}
+      </div>
+
+      {/* Second Row - 5 logos */}
+      <div className="flex gap-[16px] justify-between">
+        {logos.slice(4, 9).map((logo, index) => (
+          <div
+            key={index + 4}
+            className="relative"
+            style={{ width: `${logo.width}px`, height: `${logo.height}px` }}
+          >
+            <Image
+              src={logo.src}
+              fill
+              alt={logo.alt}
+              className="object-cover"
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

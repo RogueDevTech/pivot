@@ -13,7 +13,7 @@ const Paragraph: React.FC<TextProps> = ({
   as: Paragraph = 'p', 
   className = '' 
 }) => {
-  const baseClasses = "font-medium text-[18px] leading-[100%] tracking-[0%] align-middle";
+  const baseClasses = "font-medium text-[18px] leading-[25px] tracking-[0%] align-middle";
   
   return (
     <Paragraph className={`${baseClasses} ${className}`}>

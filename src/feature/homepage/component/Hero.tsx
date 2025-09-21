@@ -10,12 +10,12 @@ const Hero = () => {
   return (
     <section className="w-full h-full">
       <div className="flex flex-col gap-[32px]">
-        <div className="flex flex-col gap-[12px]">
+        <div className="">
           <Text>Partners</Text>
-          <h2 className="text-[#ffffff] leading-[36px] text-[28px] font-meduim lg:w-[616px] w-full">
+          <h2 className="text-[#ffffff] mt-3 leading-[36px] text-[28px] font-meduim w-full">
             Trusted by Companies Building the Future of AI
           </h2>
-          <p className="lg:w-[728px] w-full text-400 font-Regular leading-[180%] text-[14.4px] tracking-[0%] text-[#9EA3A2]">
+          <p className="w-full  mt-1 mb-5 text-400 font-Regular leading-[25px] text-[14px] max-w-[710px]  tracking-[0%] text-[#9EA3A2]">
             From fast-growing startups to Fortune 500 enterprises, developers
             choose Pivot Labs to power their most critical AI features.
           </p>
@@ -40,9 +40,9 @@ const Hero = () => {
             />
           </div>
         </div> */}
-        <div className="flex flex-col lg:flex-row gap-8 w-full">
-          {/* First image */}
-          <div className="relative w-full h-[250px] lg:w-[483px] lg:h-[318px]">
+        <div className="flex flex-col lg:flex-row gap-2 w-full">
+          {/* First image - Bigger */}
+          <div className="relative w-full lg:w-[70%] h-[250px] lg:h-[318px]">
             <Image
               src={img7}
               fill
@@ -50,7 +50,7 @@ const Hero = () => {
               className="object-cover"
             />
           </div>
-          <div className="relative w-full h-[250px] lg:w-[237px] lg:h-[318px]">
+          <div className="relative w-full lg:w-[30%] h-[250px] lg:h-[318px]">
             <Image
               src={img8}
               fill

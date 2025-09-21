@@ -1,5 +1,5 @@
 import Button from "@/components/Button";
-import InnerText from "@/components/InnerText";
+
 import React from "react";
 import Image from "next/image";
 import com1 from "@/components/images/community/comminity-one.png";
@@ -11,40 +11,42 @@ const Header = () => {
   return (
     <section className="flex flex-col gap-[32px] w-full lg:w-[729px]">
       <div className="flex flex-col gap-[32px]">
-        <div className="flex flex-col gap-[24px]">
-          <h3>Bridging the Gap by Pivot Labs</h3>
-          <InnerText>
+        <div className="">
+          <h3 className="text-[#ffffff] leading-[36px] tracking-[0%] text-[28px] font-meduim text-500">
+            Bridging the Gap by Pivot Labs
+          </h3>
+          <p className="w-full leading-[25px] mt-1 mb-3 tracking-[0%] max-w-[690px] text-[#9EA3A2] text-400 text-[14px]">
             Our community of developers, designers, researchers, and AI
             practitioners is at the heart of everything we do. From first-time
             API integrators to experienced ML engineers building production
             systems, our community shapes the direction of AI infrastructure and
             helps each other succeed.
-          </InnerText>
+          </p>
           <Button>Join Community</Button>
         </div>
         <div className="flex flex-row w-full lg:w-[729px] justify-between gap-[16px]">
-          <div className="relative w-full lg:w-[237px] h-[364px]">
+          <div className="relative w-full lg:w-[32%] h-[364px]">
             <Image
               src={com1}
               fill
               alt="com"
-              className="lg:object-cover object-contain w-full h-full"
+              className="object-cover w-full h-full"
             />
           </div>
-          <div className="relative w-full lg:w-[237px] h-[364px]">
+          <div className="relative w-full lg:w-[32%] h-[364px]">
             <Image
               src={com2}
               fill
               alt="com"
-              className="lg:object-cover object-contain w-full h-full"
+              className="object-cover w-full h-full"
             />
           </div>
-          <div className="relative w-full lg:w-[237px] h-[364px]">
+          <div className="relative w-full lg:w-[32%] h-[364px]">
             <Image
               src={com3}
               fill
               alt="com"
-              className="lg:object-cover object-contain w-full h-full"
+              className="object-cover w-full h-full"
             />
           </div>
         </div>

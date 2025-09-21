@@ -6,31 +6,31 @@ import Image from "next/image";
 
 const Header = () => {
   return (
-    <section className="flex flex-col gap-4 w-full lg:w-[729px]">
+    <section className="flex flex-col gap-4 w-full ">
       <div className="flex flex-col gap-3">
-        <h3 className="lg:w-[729px] w-full font-medium leading-[36px] text-[28px] tracking-[0%] text-[#ffffff]">
+        <h3 className="w-full font-medium leading-[36px] max-w-[600px] text-[28px] tracking-[0%] text-[#ffffff]">
           Building open super intelligent infrastructure that powers you and
           your business.
         </h3>
-        <p className=" lg:w-[729px] w-full leading-[100%] tracking-[0%] text-[#9EA3A2] text-400 text-[14px]">
+        <p className="w-full leading-[20px] tracking-[0%] max-w-[690px] text-[#9EA3A2] text-400 text-[14px]">
           Skip the AI complexity. Our simple APIs give you production-ready AI
           capabilities, letting you focus on creating amazing products instead
           of managing infrastructure.
         </p>
       </div>
-      <div className="flex flex-col lg:flex-row items-center gap-[24px] w-[100%]">
-        <div className="border-1 border-[#ffffff] px-6 py-6 flex flex-col justify-between w-full lg:w-[360px] lg:h-[632px] h-full">
-          <div className="flex flex-col gap-[16px]">
+      <div className=" mt-4 flex flex-col lg:flex-row items-center gap-[10px] w-[100%]">
+        <div className=" border-1 border-[#ffffff] px-7 py-7 flex flex-col justify-between w-full lg:h-[632px] h-full">
+          <div className="flex flex-col gap-[10px]">
             <h3 className="text-[20px] leading-[36px] font-medium tracking-[0%] text-[#ffffff] font-500">
               Avery AI
             </h3>
-            <div className="flex flex-col gap-[16px] justify-between">
-              <p className="text-[#9EA3A2] font-regular tracking-[0%] leading-[110%] text-[14px] w-full lg:w-[304px]">
+            <div className="flex flex-col gap-[20px] justify-between">
+              <p className="text-[#9EA3A2] font-regular tracking-[0%] leading-[22px] text-[14px] w-full">
                 Design is the backbone of every product. Avery AI is redefining
                 how businesses create, manage, and scale design systems by
                 bringing intelligence and adaptability into the mix
               </p>
-              <ul className="pl-[16px] font-regular text-[#9EA3A2] w-full lg:w-[297px]">
+              <ul className="pl-[16px] text-[14px] leading-[26px] font-regular text-[#9EA3A2] w-full">
                 <li className="space-y-2 list-disc">
                   {" "}
                   Intelligence platform that understands design context and user
@@ -46,18 +46,18 @@ const Header = () => {
                 </li>
               </ul>
             </div>
-            <div className="flex gap-4 items-center">
-              <button className="px-[6px] w-[128px] h-[39px] bg-[#EDEDED] text-[#0A0A0A] font-regular text-[14px] leadind-[20px] tracking-normal">
+            <div className="flex  items-center">
+              <button className="cursor-pointer px-[6px] w-[128px] h-[39px] bg-[#EDEDED] text-[#0A0A0A] font-regular text-[14px] leadind-[20px] tracking-normal hover:bg-[#D4D4D4] transition-colors">
                 Join Waitlist
               </button>
               <Link href={"/learn"} className="no-decoration">
-                <p className="text-[#9EA3A2] font-regular text-[14px] leadind-[20px] tracking-normal">
+                <button className="cursor-pointer px-[6px] w-[128px] h-[39px] bg-transparent  text-[#9EA3A2] font-regular text-[14px] leadind-[20px] tracking-normal hover:bg-[#9EA3A2] hover:text-black transition-colors">
                   Learn More
-                </p>
+                </button>
               </Link>
             </div>
           </div>
-          <div className="relative lg:w-[304px] w-full h-[198px]">
+          <div className="relative mt-6 w-full h-[194px]">
             <Image
               src={firstImage}
               alt="fill"
@@ -66,18 +66,18 @@ const Header = () => {
             />
           </div>
         </div>
-        <div className="border-1 border-[#ffffff] px-6 py-6 flex flex-col justify-between w-full lg:w-[360px] lg:h-[632px] h-full">
-          <div className="flex flex-col gap-[16px]">
+        <div className=" border-1 border-[#ffffff] px-7 py-7 flex flex-col justify-between w-full lg:h-[632px] h-full">
+          <div className="flex flex-col gap-[10px]">
             <h3 className="text-[20px] leading-[36px] font-medium tracking-[0%] text-[#ffffff] font-500">
               Gods Eye
             </h3>
-            <div className="flex flex-col gap-[16px] justify-between">
-              <p className="text-[#9EA3A2] font-regular tracking-[0%] leading-[110%] text-[14px] w-full lg:w-[304px]">
+            <div className="flex flex-col gap-[20px] justify-between">
+              <p className="text-[#9EA3A2] font-regular tracking-[0%] leading-[22px] text-[14px] w-full">
                 Our API provides developers with powerful identity intelligence
                 capabilities through simple, scalable endpoints. Built with
                 advanced AI and computer vision.
               </p>
-              <ul className="pl-[16px] font-regular text-[#9EA3A2]  w-full lg:w-[297px] leading-[168%] text-[14px] font-regular tracking-[0%]">
+              <ul className="pl-[16px] text-[14px] leading-[26px] font-regular text-[#9EA3A2] w-full">
                 <li className="space-y-2 list-disc">
                   {" "}
                   Biometric Recognition: Facial verification, voice
@@ -93,23 +93,22 @@ const Header = () => {
                 </li>
               </ul>
             </div>
-            <div className="flex gap-4 items-center">
-              <button className="px-[6px] w-[128px] h-[39px] bg-[#EDEDED] text-[#0A0A0A] font-regular text-[14px] leadind-[20px] tracking-normal">
+            <div className="flex  items-center">
+              <button className="cursor-pointer px-[6px] w-[128px] h-[39px] bg-[#EDEDED] text-[#0A0A0A] font-regular text-[14px] leadind-[20px] tracking-normal hover:bg-[#D4D4D4] transition-colors">
                 Join Waitlist
               </button>
               <Link href={"/learn"} className="no-decoration">
-                <p className="text-[#9EA3A2] font-regular text-[14px] leadind-[20px] tracking-normal">
+                <button className="cursor-pointer px-[6px] w-[128px] h-[39px] bg-transparent  text-[#9EA3A2] font-regular text-[14px] leadind-[20px] tracking-normal hover:bg-[#9EA3A2] hover:text-black transition-colors">
                   Learn More
-                </p>
+                </button>
               </Link>
             </div>
           </div>
-          <div className="lg:w-[304px] w-full h-[198px]">
+          <div className="relative mt-6 w-full h-[194px]">
             <Image
               src={secondImage}
               alt="fill"
-              width={500}
-              height={300}
+              fill
               className="w-full h-full object-cover"
             />
           </div>

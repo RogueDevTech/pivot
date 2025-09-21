@@ -1,6 +1,6 @@
-import Paragraph from "@/components/Paragraph";
+
 import React from "react";
-import Text from "@/components/Text";
+
 const Transform = () => {
   const list = [
     {
@@ -56,78 +56,76 @@ const Transform = () => {
   ];
 
   return (
-    <section className="flex flex-col gap-[64px]">
+    <section className="flex flex-col gap-[48px] w-full">
       <div className="flex flex-col gap-[32px]">
-        <div className=" flex flex-col gap-[5px] lg:w-[729px] w-full">
-          <Paragraph className=" text-[20px] text-[#ffffff]">
+        <div className="flex flex-col gap-[16px] w-full">
+          <h3 className="w-full font-medium leading-[36px] text-[28px] tracking-[0%] text-[#ffffff]">
             Transforming Design from Creation to Intelligence
-          </Paragraph>
-          <Text className="leading-[180%] text-[14px]">
+          </h3>
+          <p className="w-full leading-[25px] tracking-[0%] max-w-[729px] text-[#9EA3A2] text-[14px]">
             In the rapidly evolving world of digital design, teams face an
             increasingly complex challenge: creating exceptional user
             experiences while maintaining consistency, accessibility, and
             business impact at scale. Enter Avery AI—Pivotlabs groundbreaking
             artificial general intelligence platform specifically engineered for
             design intelligence that fundamentally transforms how teams approach
-            digital product creation. Avery AI represents the convergence of
-            advanced artificial intelligence with deep design expertise,
-            creating the worlds first AGI system purpose-built to understand,
-            analyze, and optimize the entire design process from conception to
-            user impact.
-          </Text>
+            digital product creation. 
+          </p>
+          <p className="w-full leading-[25px] tracking-[0%] max-w-[729px] text-[#9EA3A2] text-[14px]">
+            Avery AI represents the convergence of advanced artificial
+            intelligence with deep design expertise, creating the worlds first
+            AGI system purpose-built to understand, analyze, and optimize the
+            entire design process from conception to user impact.
+          </p>
         </div>
         <div className="flex flex-col gap-[24px]">
-          <h3 className="leading-[31px] tracking-[0%] text-[#ffffff] text-[20px] font-medium w-[432px]">
-            Federated learning makes Avery AI stronger with every design
-            decision.
+          <h3 className="w-full font-medium leading-[36px] text-[28px] max-w-[600px] tracking-[0%] text-[#ffffff]">
+          The Intelligence Difference: Multi-Dimensional AI Analysis
           </h3>
-          <div className="md:grid-cols-2 grid sm:grid-cols-1 lg:grid-cols-3 justify-between gap-[16px] lg:gap-[5px] w-full lg:w-[729px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[16px] w-full">
             {list.map((feat, index) => (
-              <div
-                key={index}
-                className="flex flex-col justify-between gap-[16px] lg:w-[216px] w-full"
-              >
-                <p className="font-medium leading-[100%] tracking-[0%] text-[#ffffff] text-[16px]">
+              <div key={index} className="flex flex-col gap-[16px] w-full">
+                <p className="font-medium leading-[20px] tracking-[0%] text-[#ffffff] max-w-[230px] text-[16px]">
                   {feat.txt}
                 </p>
-                <Text className="text-[14px] leading-[180%]">
+                <p className="text-[#9EA3A2] text-[14px] leading-[25px] tracking-[0%]">
                   {feat.paragraph}
-                </Text>
+                </p>
               </div>
             ))}
           </div>
         </div>
       </div>
       <div className="flex flex-col gap-[24px]">
-        <p className="w-[296px] text-[#ffffff] leading-[31px] tracking-[0%] text-[20px]">
+        <h3 className="w-full font-medium leading-[36px] text-[28px] max-w-[400px] tracking-[0%] text-[#ffffff]">
           Built for Modern Design Teams: AI-Powered Collaboration
-        </p>
-        <div className="flex flex-col gap-[32px] w-full lg:w-[729px]">
+        </h3>
+        <div className="flex flex-col gap-[32px] w-full">
           {item.map((feat, index) => (
             <div key={index} className="flex flex-col gap-[16px]">
-              <p className="font-medium text-[18px] leading-[100%] tracking-[0%] text-[#ffffff]">
+              <h4 className="font-medium text-[20px] leading-[20px] tracking-[0%] text-[#ffffff]">
                 {feat.header}
-              </p>
-              <ul className="flex flex-col gap-[16px]">
-                <li>
-                  <Text className="leading-[180%] text-[14px]">
+              </h4>
+              <ul className="flex flex-col gap-[10px] pl-[16px]">
+                <li className="list-disc">
+                  <p className="text-[#9EA3A2] text-[14px] leading-[20px] tracking-[0%]">
                     {feat.list1}
-                  </Text>
+                  </p>
                 </li>
-                <li>
-                  <Text className="leading-[180%] text-[14px]">
+                <li className="list-disc">
+                  <p className="text-[#9EA3A2] text-[14px] leading-[20px] tracking-[0%]">
                     {feat.list2}
-                  </Text>
+                  </p>
                 </li>
-                <li>
-                  <Text className="leading-[180%] text-[14px]">
+                <li className="list-disc">
+                  <p className="text-[#9EA3A2] text-[14px] leading-[20px] tracking-[0%]">
                     {feat.list3}
-                  </Text>
+                  </p>
                 </li>
-                <li>
-                  <Text className="leading-[180%] text-[14px]">
+                <li className="list-disc">
+                  <p className="text-[#9EA3A2] text-[14px] leading-[20px] tracking-[0%]">
                     {feat.list4}
-                  </Text>
+                  </p>
                 </li>
               </ul>
             </div>

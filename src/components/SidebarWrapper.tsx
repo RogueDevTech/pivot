@@ -2,7 +2,6 @@
 
 import { useSidebarToggleStore } from "@/store/useSidebarToggleStore";
 import Sidebar from "@/components/Sidebar";
-import ToggleSidebarButton from "@/components/ToggleSidebarButton";
 import Footer from "@/feature/homepage/component/Footer";
 
 export default function SidebarWrapper({
@@ -13,24 +12,25 @@ export default function SidebarWrapper({
   const visible = useSidebarToggleStore((s) => s.visible);
 
   return (
-    <div className="relative flex max-w-[1440px] mx-auto">
+    <div className=" relative flex w-full">
       {/* Sidebar */}
-      {visible && <Sidebar />}
+      {visible && (
+        <div className=" w-[30%]">
+          <Sidebar />
+        </div>
+      )}
+
+      {/* Main Content */}
       <main
-        className={`mt-[90px] mb-[32px] min-h-screen overflow-y-auto no-scrollbar px-4 md:px-12 transition-all duration-300
-          ${visible ? "ml-0 md:ml-[270px]" : "ml-0 w-full"}`}
+        className={` w-full mt-[90px] mb-[32px] min-h-screen overflow-y-auto no-scrollbar px-4 md:px-12 transition-all duration-300
+          ${visible ? "w-[70%]" : "w-full"}`}
       >
-        <ToggleSidebarButton />
+        {/* <ToggleSidebarButton /> */}
         {children}
-        <div className="mt-[100px]">
+        <div className="mt-[50px]">
           <Footer />
         </div>
       </main>
     </div>
   );
 }
-
-
-
-
-
