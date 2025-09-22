@@ -5,6 +5,7 @@ import Image, { StaticImageData } from "next/image";
 
 import React from "react";
 import Button from "@/components/Button";
+import Link from "next/link";
 import Text from "@/components/Text";
 interface ResearchCard {
   id: number;
@@ -54,10 +55,12 @@ const Content: React.FC = () => {
           efficiency, and accessibility. We publish our findings and contribute
           to the open-source community to accelerate progress for everyone.
         </p>
-        <Button>Read More</Button>
+        <Link href="/research" className="no-underline">
+          <Button>Read More</Button>
+        </Link>
       </section>
 
-      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-[16px]">
+      <section className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-[10px]">
         <div>
           {researchCards.privacy.map((card) => (
             <div key={card.id} className="w-full flex flex-col gap-[12px]">

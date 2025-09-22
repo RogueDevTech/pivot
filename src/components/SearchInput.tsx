@@ -18,13 +18,13 @@ const SearchInput: React.FC<SearchInputProps> = ({
 }) => {
   return (
     <div className="relative flex">
-      <FiSearch className="absolute left-[10px] top-[7px]" />
+      <FiSearch className="absolute text-[#888888] left-[10px] top-[7px]" />
       <input
         type="text"
         value={value}
         onChange={onChange}
         placeholder={placeholder}
-        className="bg-[#1A1A1A] outline-none py-[12px] px-[32px] w-full h-[32px] text-[rgba(136,136,136,1)] rounded-md font-geist font-normal leading-[100%] placeholder:text-[#888888] placeholder:font-geist placeholder:font-regular placeholder:leading-[100%]"
+        className="bg-[#1A1A1A] text-[14px] outline-none py-[12px] px-[32px] w-full h-[32px] text-[rgba(136,136,136,1)] rounded-md font-geist font-normal leading-[100%] placeholder:text-[#888888] placeholder:font-geist placeholder:font-regular placeholder:leading-[100%]"
       />
       <Image
         src={keyboard}

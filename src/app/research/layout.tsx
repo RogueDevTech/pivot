@@ -8,7 +8,7 @@ export default function ResearchLayout({
 }) {
   return (
     <main className="min-h-screen">
-      <div className="container mx-auto px-4">{children}</div>
+      <div className="container mx-auto ">{children}</div>
     </main>
   );
 }

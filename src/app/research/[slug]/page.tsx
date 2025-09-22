@@ -171,16 +171,16 @@ export default async function ResearchDetail({ params }: PageProps) {
       </Link>
 
       <div className="w-full lg:w-[729px]">
-        <div className="flex items-center flex-col gap-[24px] mb-[24px]">
-          <h3 className="text-[#ffffff] text-[28px] text-center font-medium">
+        <div className="flex items-center flex-col gap-[12px] mb-[24px]">
+          <h3 className="text-[#ffffff] w-full max-w-[600px] text-[28px] text-center font-medium">
             {researchItem.title}
           </h3>
-          <p className="text-[#9EA3A2] text-[14px] text-center">
+          <p className="text-[#9EA3A2] w-full max-w-[520px] text-[14px] text-center">
             {researchItem.content}
           </p>
         </div>
 
-        <div className="relative w-full h-[296px] mb-8">
+        <div className=" relative w-full h-[296px] mb-8">
           <Image
             src={image}
             alt={researchItem.title}
