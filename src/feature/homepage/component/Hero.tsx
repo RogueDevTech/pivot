@@ -5,6 +5,7 @@ import img8 from "@/components/images/seventh-homepage.png";
 import Button from "@/components/Button";
 import Text from "@/components/Text";
 import Logo from "@/components/Logo";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -19,7 +20,9 @@ const Hero = () => {
             From fast-growing startups to Fortune 500 enterprises, developers
             choose Pivot Labs to power their most critical AI features.
           </p>
+          <Link href="/partners" className="no-underline">
           <Button> Become a Partner</Button>
+          </Link>
         </div>
 
         {/* <div className="flex flex-col lg:flex-row gap-8 w-fit">

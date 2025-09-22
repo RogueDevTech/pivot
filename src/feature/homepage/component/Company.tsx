@@ -4,6 +4,7 @@ import Image from "next/image";
 import img1 from "@/components/images/solution/homepage-woman.png";
 import img2 from "@/components/images/solution/homepage-color.png";
 import img3 from "@/components/images/solution/homepage-group.png";
+import Link from "next/link";
 
 const Company = () => {
   return (
@@ -28,7 +29,9 @@ const Company = () => {
         to support massive scale while maintaining an excellent developer
         experience.
       </p>
-      <Button>Learn More</Button>
+      <Link href="/company" className="no-underline">
+        <Button>Learn More</Button>
+      </Link>
       <div className="mt-10 flex flex-col lg:flex-row gap-[10px] items-center h-full lg:h-[335px] w-full">
         <div className="relative w-full lg:w-[70%] h-[335px]">
           <Image src={img1} fill alt="image" className="object-cover" />

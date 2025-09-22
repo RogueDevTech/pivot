@@ -43,13 +43,13 @@ const Footer: React.FC = () => {
         </div>
         <div className="flex gap-6 text-sm">
           <a
-            href="/privacy-policy"
+            href="/privacy"
             className="hover:no-underline  leading-[100%] tracking-[0%] font-regular text-[#ffffff]"
           >
             Privacy Policy
           </a>
           <a
-            href="/terms-of-service"
+            href="/terms"
             className="hover:no-underline  leading-[100%] tracking-[0%] font-regular text-[#ffffff]"
           >
             Terms of Service

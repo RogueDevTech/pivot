@@ -11,12 +11,12 @@ import InnerText from "@/components/InnerText";
 import Minisize from "@/components/Minisize";
 
 export const DynamicMultiModelContent: React.FC = () => (
-  <div className=" w-full">
+  <div className=" w-[75%] leading-[25px]">
     <section className="flex flex-col gap-[16px] mb-12">
       <h2 className="text-[#FFFFFF] leading-[36px] tracking-[0%] text-[20px] font-medium">
         Abstract
       </h2>
-      <p className="text-[#9EA3A2] leading-[20px] text-[14px] tracking-[0%] font-regular">
+      <p className="text-[#9EA3A2] leading-[25px] text-[14px] tracking-[0%] font-regular">
         Modern AI applications require diverse model capabilities across text,
         image, audio, and structured data processing. Traditional approaches
         deploy single-purpose models, leading to resource inefficiency and
@@ -29,7 +29,7 @@ export const DynamicMultiModelContent: React.FC = () => (
         demonstrating significant improvements in both performance and resource
         utilization.
       </p>
-      <p className="text-[#9EA3A2] leading-[20px] text-[14px] tracking-[0%] font-regular">
+      <p className="text-[#9EA3A2] leading-[25px] text-[14px] tracking-[0%] font-regular">
         Keywords: AI infrastructure, model orchestration, distributed systems,
         inference optimization, multi-modal AI
       </p>
@@ -38,7 +38,7 @@ export const DynamicMultiModelContent: React.FC = () => (
       <h2 className="text-[#FFFFFF] leading-[36px] tracking-[0%] text-[20px] font-medium">
         1. Introduction
       </h2>
-      <p className="text-[#9EA3A2] leading-[20px] text-[14px] tracking-[0%] font-regular">
+      <p className="text-[#9EA3A2] leading-[25px] text-[14px] tracking-[0%] font-regular">
         The proliferation of AI applications has created unprecedented demand
         for scalable, efficient AI infrastructure. Organizations typically
         deploy multiple specialized models to handle different tasks: large
@@ -46,7 +46,7 @@ export const DynamicMultiModelContent: React.FC = () => (
         analysis, and audio processing models for speech recognition. This
         fragmented approach leads to several challenges:
       </p>
-      <ul className="flex flex-col gap-[8px] text-[#9EA3A2] leading-[20px] text-[14px] tracking-[0%] font-regular pl-[16px]">
+      <ul className="flex flex-col gap-[8px] text-[#9EA3A2] leading-[25px] text-[14px] tracking-[0%] font-regular pl-[16px]">
         <li className="list-disc">
           <strong> 1.Resource inefficiency:</strong> Multiple models running
           simultaneously consume excessive computational resources
@@ -64,18 +64,18 @@ export const DynamicMultiModelContent: React.FC = () => (
           drives up infrastructure costs
         </li>
       </ul>
-      <p className="text-[#9EA3A2] leading-[20px] text-[14px] tracking-[0%] font-regular">
+      <p className="text-[#9EA3A2] leading-[25px] text-[14px] tracking-[0%] font-regular">
         Traditional solutions have focused on optimizing individual models
         rather than the orchestration layer that coordinates between them.
         Recent work in model compression [1] and quantization [2] has improved
         single-model performance, but fails to address the system-level
         challenges of multi-model deployments.
       </p>
-      <p className="text-[#9EA3A2] leading-[20px] text-[14px] tracking-[0%] font-regular">
+      <p className="text-[#9EA3A2] leading-[25px] text-[14px] tracking-[0%] font-regular">
         We propose a dynamic multi-model orchestration system that addresses
         these challenges through:
       </p>
-      <ul className="list-disc list-inside flex flex-col gap-[8px] text-[#9EA3A2] leading-[20px] text-[14px] tracking-[0%] font-regular pl-[16px]">
+      <ul className="list-disc list-inside flex flex-col gap-[8px] text-[#9EA3A2] leading-[25px] text-[14px] tracking-[0%] font-regular pl-[16px]">
         <li>
           Intelligent request routing based on real-time performance metrics
         </li>
@@ -102,7 +102,7 @@ export const DynamicMultiModelContent: React.FC = () => (
         <h3 className="text-[#FFFFFF] leading-[20px] tracking-[0%] text-[16px] font-medium">
           2.1 Model Serving Systems
         </h3>
-        <p className="text-[#9EA3A2] leading-[20px] text-[14px] tracking-[0%] font-regular">
+        <p className="text-[#9EA3A2] leading-[25px] text-[14px] tracking-[0%] font-regular">
           Early work in model serving focused on single-model optimization.
           TensorFlow Serving [3] introduced batching and caching mechanisms for
           improved throughput. TorchServe [4] extended this with support for
@@ -114,7 +114,7 @@ export const DynamicMultiModelContent: React.FC = () => (
         <h3 className="text-[#FFFFFF] leading-[20px] tracking-[0%] text-[16px] font-medium">
           2.2 AI System Orchestration
         </h3>
-        <p className="text-[#9EA3A2] leading-[20px] text-[14px] tracking-[0%] font-regular">
+        <p className="text-[#9EA3A2] leading-[25px] text-[14px] tracking-[0%] font-regular">
           Clipper [5] introduced adaptive query routing for machine learning
           systems, demonstrating the benefits of ensemble approaches. Spark ML
           [6] provided distributed model training capabilities but limited
@@ -126,7 +126,7 @@ export const DynamicMultiModelContent: React.FC = () => (
         <h3 className="text-[#FFFFFF] leading-[20px] tracking-[0%] text-[16px] font-medium">
           2.3 Multi-Modal AI Systems
         </h3>
-        <p className="text-[#9EA3A2] leading-[20px] text-[14px] tracking-[0%] font-regular">
+        <p className="text-[#9EA3A2] leading-[25px] text-[14px] tracking-[0%] font-regular">
           Recent advances in multi-modal AI [8] have demonstrated the potential
           for unified processing of diverse data types. CLIP [9] and DALL-E [10]
           showed how single models can handle multiple modalities, but these
@@ -754,7 +754,7 @@ export const PrivacyPreservingContent: React.FC = () => (
       <h2 className="text-[#FFFFFF] leading-[36px] tracking-[0%] text-[20px] font-medium">
         Abstract
       </h2>
-      <p className="text-[#9EA3A2] leading-[20px] text-[14px] tracking-[0%] font-regular">
+      <p className="text-[#9EA3A2] leading-[25px] text-[14px] tracking-[0%] font-regular">
         Enterprise adoption of AI is often constrained by data privacy
         regulations and competitive concerns about sharing sensitive
         information. Traditional centralized machine learning approaches require
@@ -1094,7 +1094,7 @@ export const DynamicInfrastructureContent: React.FC = () => (
       <h2 className="text-[#FFFFFF] leading-[36px] tracking-[0%] text-[20px] font-medium">
         Abstract
       </h2>
-      <p className="text-[#9EA3A2] leading-[20px] text-[14px] tracking-[0%] font-regular">
+      <p className="text-[#9EA3A2] leading-[25px] text-[14px] tracking-[0%] font-regular">
         The deployment of AI applications at the network edge promises ultra-low
         latency and improved user experiences, but current approaches fail to
         address the environmental impact of distributed computing
@@ -1113,7 +1113,7 @@ export const DynamicInfrastructureContent: React.FC = () => (
         locations processing 2.5 million daily inferences shows consistent
         carbon footprint reduction with minimal impact on user experience.
       </p>
-      <p className="text-[#9EA3A2] leading-[20px] text-[14px] tracking-[0%] font-regular">
+      <p className="text-[#9EA3A2] leading-[25px] text-[14px] tracking-[0%] font-regular">
         Keywords: edge computing, sustainable AI, carbon awareness, green
         computing, renewable energy, model optimization, distributed systems
       </p>

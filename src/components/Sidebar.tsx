@@ -76,12 +76,12 @@ const Sidebar = () => {
       {visible && (
         <aside
           className={clsx(
-            " sticky top-[60px] h-[calc(100vh-60px)] w-[300px] bg-black text-white flex flex-col shadow-lg border border-[#292929] overflow-y-auto no-scrollbar transition-transform z-40",
+            "sticky top-[60px] h-[calc(100vh-60px)] w-[250px] bg-black text-white flex flex-col shadow-lg border border-[#292929] overflow-y-auto no-scrollbar transition-transform z-40",
             "hidden md:flex"
           )}
         >
           <nav className="flex flex-col">
-            <div className="px-6 py-5 border-b border-[#292929] sticky top-0 bg-black z-10">
+            <div className="px-5 py-5 border-b border-[#292929] sticky top-0 bg-black z-10">
               <SearchInput
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
@@ -89,7 +89,7 @@ const Sidebar = () => {
             </div>
 
             {/* Main */}
-            <ul className="px-6 py-5 space-y-4 border-b border-[#292929]">
+            <ul className="px-5 py-5 space-y-1 border-b border-[#292929]">
               {navItems.main.map((item) => (
                 <li key={item.name}>
                   <Link
@@ -102,20 +102,20 @@ const Sidebar = () => {
                     }`}
                   >
                     <span>{item.name}</span>
-                    {/* {activeItem === item.name && <ArrowIcon />} */}
+                    {activeItem === item.name && <ArrowIcon />}
                   </Link>
                 </li>
               ))}
             </ul>
 
             {/* Company */}
-            <ul className="px-6 py-5 space-y-4 border-b border-[#292929]">
+            <ul className="px-5 py-5 space-y-1 border-b border-[#292929]">
               {navItems.company.map((item) => (
                 <li key={item.name}>
                   <Link
                     href={item.path}
                     onClick={close}
-                    className={`flex items-center justify-between py-1 ${
+                    className={`flex text-[14px] items-center justify-between py-1 ${
                       pathname === item.path
                         ? "text-[#FFFFFF]"
                         : "text-[#A1A1A1]"
@@ -129,13 +129,13 @@ const Sidebar = () => {
             </ul>
 
             {/* Support */}
-            <ul className="px-6 py-5 space-y-4">
+            <ul className="px-5 py-5 space-y-1">
               {navItems.support.map((item) => (
                 <li key={item.name}>
                   <Link
                     href={item.path}
                     onClick={close}
-                    className={`flex items-center justify-between py-1 ${
+                    className={`flex text-[14px] items-center justify-between py-1 ${
                       pathname === item.path
                         ? "text-[#FFFFFF]"
                         : "text-[#A1A1A1]"

@@ -96,7 +96,7 @@ const Boundaries: React.FC = () => {
   ] as Array<(typeof researchItems)[number] & { image: StaticImageData }>;
 
   return (
-    <section className="flex flex-col gap-[48px] w-full">
+    <section className=" flex flex-col gap-[48px] w-full">
       <div className="">
         <h2 className="w-full mt-3 font-medium leading-[36px] text-[28px] tracking-[0%] text-[#ffffff]">
           Pushing the Boundaries of AI Infrastructure

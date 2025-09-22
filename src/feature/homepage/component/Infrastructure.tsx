@@ -6,6 +6,7 @@ import img14 from "@/components/images/forteen.png";
 import img15 from "@/components/images/fifteen.png";
 import img16 from "@/components/images/sixteen.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const Infrastructure = () => {
   return (
@@ -20,16 +21,18 @@ const Infrastructure = () => {
           powers breakthrough applications across every industry. Lets push the
           boundaries of possibilities and build the future.
         </p>
-        <Button>Explore Roles</Button>
+        <Link href="/careers" className="no-underline">
+          <Button>Explore Roles</Button>
+        </Link>
       </div>
-      <div className="flex flex-col lg:flex-row gap-[16px] w-full">
+      <div className="flex flex-col lg:flex-row gap-[8px] w-full">
         <div className="relative w-full h-[200px] lg:h-[285px]">
           <Image src={img13} fill alt="img" className="object-cover" />
         </div>
         <div className="relative w-full h-[200px] lg:h-[285px]">
           <Image src={img14} fill alt="img" className="object-cover" />
         </div>
-        <div className="flex flex-col lg:flex-row gap-[16px] w-full">
+        <div className=" flex flex-col lg:flex-col gap-[10px] w-full">
           <div className="relative w-full h-[150px] lg:h-[135px]">
             <Image src={img15} fill alt="img" className="object-cover" />
           </div>

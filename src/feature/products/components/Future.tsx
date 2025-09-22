@@ -6,7 +6,7 @@ import Button from "@/components/Button";
 
 const Future = () => {
   return (
-    <section className="flex flex-col gap-[48px] w-full">
+    <section className=" flex flex-col gap-[48px] w-full">
       <div className="">
         <h3 className="w-full mt-3 font-medium leading-[36px] text-[28px] tracking-[0%] text-[#ffffff]">
           Avery AI: The Future of Design Intelligence

@@ -6,8 +6,8 @@ import Image from "next/image";
 
 const Header = () => {
   return (
-    <section className="flex flex-col gap-4 w-full ">
-      <div className="flex flex-col gap-3">
+    <section className=" flex flex-col gap-4 w-full ">
+      <div className="mt-3 flex flex-col gap-3">
         <h3 className="w-full font-medium leading-[36px] max-w-[600px] text-[28px] tracking-[0%] text-[#ffffff]">
           Building open super intelligent infrastructure that powers you and
           your business.
@@ -18,8 +18,8 @@ const Header = () => {
           of managing infrastructure.
         </p>
       </div>
-      <div className="mt-4 flex flex-col lg:flex-row items-stretch gap-[16px] w-full">
-        <div className="border-1 border-[#ffffff] px-4 py-6 lg:px-7 lg:py-7 flex flex-col justify-between w-full lg:h-[632px] h-auto min-h-[400px]">
+      <div className=" mt-4 grid grid-cols-1 lg:grid-cols-2 items-stretch gap-[16px] w-full">
+        <div className="border-1 border-[#ffffff] px-4 py-6 lg:px-6 lg:py-7  w-full  ">
           <div className="flex flex-col gap-[10px]">
             <h3 className="text-[20px] leading-[36px] font-medium tracking-[0%] text-[#ffffff] font-500">
               Avery AI
@@ -50,7 +50,7 @@ const Header = () => {
               <button className="cursor-pointer px-[6px] w-full sm:w-[128px] h-[39px] bg-[#EDEDED] text-[#0A0A0A] font-regular text-[14px] leading-[20px] tracking-normal hover:bg-[#D4D4D4] transition-colors">
                 Join Waitlist
               </button>
-              <Link href={"/learn"} className="no-decoration">
+              <Link href={"/products"} className="no-decoration">
                 <button className="cursor-pointer px-[6px] w-full sm:w-[128px] h-[39px] bg-transparent text-[#9EA3A2] font-regular text-[14px] leading-[20px] tracking-normal hover:bg-[#9EA3A2] hover:text-black transition-colors">
                   Learn More
                 </button>
@@ -66,7 +66,7 @@ const Header = () => {
             />
           </div>
         </div>
-        <div className="border-1 border-[#ffffff] px-4 py-6 lg:px-7 lg:py-7 flex flex-col justify-between w-full lg:h-[632px] h-auto min-h-[400px]">
+        <div className="border-1 border-[#ffffff] px-4 py-6 lg:px-6 lg:py-7  w-full  ">
           <div className="flex flex-col gap-[10px]">
             <h3 className="text-[20px] leading-[36px] font-medium tracking-[0%] text-[#ffffff] font-500">
               Gods Eye
@@ -97,7 +97,7 @@ const Header = () => {
               <button className="cursor-pointer px-[6px] w-full sm:w-[128px] h-[39px] bg-[#EDEDED] text-[#0A0A0A] font-regular text-[14px] leading-[20px] tracking-normal hover:bg-[#D4D4D4] transition-colors">
                 Join Waitlist
               </button>
-              <Link href={"/learn"} className="no-decoration">
+              <Link href={"/solutions"} className="no-decoration">
                 <button className="cursor-pointer px-[6px] w-full sm:w-[128px] h-[39px] bg-transparent text-[#9EA3A2] font-regular text-[14px] leading-[20px] tracking-normal hover:bg-[#9EA3A2] hover:text-black transition-colors">
                   Learn More
                 </button>
