@@ -1,27 +1,46 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
 
 const Section: React.FC<{
   title: string;
   children: React.ReactNode;
 }> = ({ title, children }) => {
   return (
-    <div className="flex flex-col gap-[8px]">
+    <motion.div
+      className="flex flex-col gap-[8px]"
+      initial={{ opacity: 0, y: 12 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
+    >
       <h2 className="text-[#ffffff] text-[18px] leading-[24px] font-medium tracking-[0%]">
         {title}
       </h2>
       <div className="flex flex-col gap-[8px]">{children}</div>
       <div className="border-t border-[#EAEAEA] mt-[12px]"></div>
-    </div>
+    </motion.div>
   );
 };
 
 export default function PrivacyPolicyPage() {
   return (
-    <main className="w-full h-full">
+    <motion.main
+      className="w-full h-full"
+      initial={{ opacity: 0, y: 16 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
+    >
       <section className="flex flex-col gap-[24px] w-full py-[32px]">
-        <div className="flex flex-col gap-[12px]">
+        <motion.div
+          className="flex flex-col gap-[12px]"
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+        >
           <h1 className="text-[#ffffff] text-[28px] leading-[36px] font-medium tracking-[0%]">
             Privacy Policy
           </h1>
@@ -30,7 +49,7 @@ export default function PrivacyPolicyPage() {
             collects, uses, and protects your information when you use our
             Services.
           </p>
-        </div>
+        </motion.div>
 
         <Section title="1. Information We Collect">
           <ul className="list-disc pl-[18px] text-[#9EA3A2] text-[14px] leading-[22px]">
@@ -128,6 +147,6 @@ export default function PrivacyPolicyPage() {
           </p>
         </Section>
       </section>
-    </main>
+    </motion.main>
   );
 }
