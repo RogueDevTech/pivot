@@ -1,25 +1,52 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import firstImage from "@/components/images/first-homepage.png";
 import secondImage from "@/components/images/second-homepage.png";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const Header = () => {
   return (
     <section className=" flex flex-col gap-4 w-full ">
-      <div className="mt-3 flex flex-col gap-3">
-        <h3 className="w-full font-medium leading-[36px] max-w-[600px] text-[28px] tracking-[0%] text-[#ffffff]">
+      <motion.div
+        className="mt-3 flex flex-col gap-3"
+        initial={{ opacity: 0, y: 18 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.4 }}
+        transition={{ duration: 0.45, ease: "easeOut" }}
+      >
+        <motion.h3
+          className="w-full font-medium leading-[36px] max-w-[600px] text-[28px] tracking-[0%] text-[#ffffff]"
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.6 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+        >
           Building open super intelligent infrastructure that powers you and
           your business.
-        </h3>
-        <p className="w-full leading-[20px] tracking-[0%] max-w-[690px] text-[#9EA3A2] text-400 text-[14px]">
+        </motion.h3>
+        <motion.p
+          className="w-full leading-[20px] tracking-[0%] max-w-[690px] text-[#9EA3A2] text-400 text-[14px]"
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.6 }}
+          transition={{ duration: 0.4, ease: "easeOut", delay: 0.05 }}
+        >
           Skip the AI complexity. Our simple APIs give you production-ready AI
           capabilities, letting you focus on creating amazing products instead
           of managing infrastructure.
-        </p>
-      </div>
+        </motion.p>
+      </motion.div>
       <div className=" mt-4 grid grid-cols-1 lg:grid-cols-2 items-stretch gap-[16px] w-full">
-        <div className="border-1 border-[#ffffff] px-4 py-6 lg:px-6 lg:py-7  w-full  ">
+        <motion.div
+          className="border-1 border-[#ffffff] px-4 py-6 lg:px-6 lg:py-7  w-full  "
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.45, ease: "easeOut" }}
+        >
           <div className="flex flex-col gap-[10px]">
             <h3 className="text-[20px] leading-[36px] font-medium tracking-[0%] text-[#ffffff] font-500">
               Avery AI
@@ -57,16 +84,29 @@ const Header = () => {
               </Link>
             </div>
           </div>
-          <div className="relative mt-6 w-full h-[194px]">
+          <motion.div
+            className="relative mt-6 w-full h-[194px]"
+            initial={{ scale: 0.98, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 0.4, ease: "easeOut", delay: 0.05 }}
+            whileHover={{ scale: 1.02 }}
+          >
             <Image
               src={firstImage}
               alt="fill"
               fill
               className="w-full h-full object-cover"
             />
-          </div>
-        </div>
-        <div className="border-1 border-[#ffffff] px-4 py-6 lg:px-6 lg:py-7  w-full  ">
+          </motion.div>
+        </motion.div>
+        <motion.div
+          className="border-1 border-[#ffffff] px-4 py-6 lg:px-6 lg:py-7  w-full  "
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.45, ease: "easeOut", delay: 0.1 }}
+        >
           <div className="flex flex-col gap-[10px]">
             <h3 className="text-[20px] leading-[36px] font-medium tracking-[0%] text-[#ffffff] font-500">
               Gods Eye
@@ -104,15 +144,22 @@ const Header = () => {
               </Link>
             </div>
           </div>
-          <div className="relative mt-6 w-full h-[194px]">
+          <motion.div
+            className="relative mt-6 w-full h-[194px]"
+            initial={{ scale: 0.98, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 0.4, ease: "easeOut", delay: 0.15 }}
+            whileHover={{ scale: 1.02 }}
+          >
             <Image
               src={secondImage}
               alt="fill"
               fill
               className="w-full h-full object-cover"
             />
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

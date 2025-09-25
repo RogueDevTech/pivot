@@ -86,6 +86,7 @@ import Link from "next/link";
 import img1 from "@/components/images/research/research-one.png";
 import img2 from "@/components/images/research/research-two.png";
 import img3 from "@/components/images/research/research-three.png";
+import { motion } from "framer-motion";
 
 const Boundaries: React.FC = () => {
   // Map research items to their images
@@ -97,7 +98,13 @@ const Boundaries: React.FC = () => {
 
   return (
     <section className=" flex flex-col gap-[48px] w-full">
-      <div className="">
+      <motion.div
+        className=""
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.4 }}
+        transition={{ duration: 0.45, ease: "easeOut" }}
+      >
         <h2 className="w-full mt-3 font-medium leading-[36px] text-[28px] tracking-[0%] text-[#ffffff]">
           Pushing the Boundaries of AI Infrastructure
         </h2>
@@ -109,34 +116,52 @@ const Boundaries: React.FC = () => {
           of technological innovation.
         </p>
         <Button>Contact Us</Button>
-      </div>
+      </motion.div>
       <div className=" grid grid-cols-1 lg:grid-cols-2 gap-[16px] w-full">
-        {researchWithImages.map((item) => (
-          <Link
+        {researchWithImages.map((item, index) => (
+          <motion.div
             key={item.slug}
-            href={`/research/${item.slug}`}
-            className="flex flex-col gap-[8px] w-full group cursor-pointer"
+            className="w-full"
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{
+              duration: 0.45,
+              ease: "easeOut",
+              delay: index * 0.06,
+            }}
           >
-            <div className="relative w-full h-[239px] overflow-hidden">
-              <Image
-                src={item.image}
-                fill
-                alt={item.title}
-                className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-            <div className="">
-              <p className="text-[#9EA3A2] text-[12px] mb-1 leading-[180%] tracking-[0%] font-regular">
-                {item.date}
-              </p>
-              <h5 className="leading-[25px] mb-2 tracking-[0%] text-[16px] max-w-[250px] font-medium text-[#ffffff] group-hover:text-blue-400 transition-colors">
-                {item.title}
-              </h5>
-              <p className="text-[#9EA3A2] leading-[25px] tracking-[0%] font-regular text-[14px]">
-                {item.description}
-              </p>
-            </div>
-          </Link>
+            <Link
+              href={`/research/${item.slug}`}
+              className="flex flex-col gap-[8px] w-full group cursor-pointer"
+            >
+              <motion.div
+                className="relative w-full h-[239px] overflow-hidden"
+                initial={{ opacity: 0, scale: 0.98 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true, amount: 0.4 }}
+                transition={{ duration: 0.4, ease: "easeOut", delay: 0.05 }}
+              >
+                <Image
+                  src={item.image}
+                  fill
+                  alt={item.title}
+                  className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                />
+              </motion.div>
+              <div className="">
+                <p className="text-[#9EA3A2] text-[12px] mb-1 leading-[180%] tracking-[0%] font-regular">
+                  {item.date}
+                </p>
+                <h5 className="leading-[25px] mb-2 tracking-[0%] text-[16px] max-w-[250px] font-medium text-[#ffffff] group-hover:text-blue-400 transition-colors">
+                  {item.title}
+                </h5>
+                <p className="text-[#9EA3A2] leading-[25px] tracking-[0%] font-regular text-[14px]">
+                  {item.description}
+                </p>
+              </div>
+            </Link>
+          </motion.div>
         ))}
       </div>
     </section>

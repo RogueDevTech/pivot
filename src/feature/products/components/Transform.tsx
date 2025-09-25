@@ -1,5 +1,7 @@
+"use client";
 
 import React from "react";
+import { motion } from "framer-motion";
 
 const Transform = () => {
   const list = [
@@ -58,7 +60,13 @@ const Transform = () => {
   return (
     <section className="flex flex-col gap-[48px] w-full">
       <div className="flex flex-col gap-[32px]">
-        <div className="flex flex-col gap-[16px] w-full">
+        <motion.div
+          className="flex flex-col gap-[16px] w-full"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.45, ease: "easeOut" }}
+        >
           <h3 className="w-full font-medium leading-[36px] text-[28px] tracking-[0%] text-[#ffffff]">
             Transforming Design from Creation to Intelligence
           </h3>
@@ -69,7 +77,7 @@ const Transform = () => {
             business impact at scale. Enter Avery AI—Pivotlabs groundbreaking
             artificial general intelligence platform specifically engineered for
             design intelligence that fundamentally transforms how teams approach
-            digital product creation. 
+            digital product creation.
           </p>
           <p className="w-full leading-[25px] tracking-[0%] max-w-[729px] text-[#9EA3A2] text-[14px]">
             Avery AI represents the convergence of advanced artificial
@@ -77,32 +85,67 @@ const Transform = () => {
             AGI system purpose-built to understand, analyze, and optimize the
             entire design process from conception to user impact.
           </p>
-        </div>
-        <div className="flex flex-col gap-[24px]">
+        </motion.div>
+        <motion.div
+          className="flex flex-col gap-[24px]"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.45, ease: "easeOut", delay: 0.05 }}
+        >
           <h3 className="w-full font-medium leading-[36px] text-[28px] max-w-[600px] tracking-[0%] text-[#ffffff]">
-          The Intelligence Difference: Multi-Dimensional AI Analysis
+            The Intelligence Difference: Multi-Dimensional AI Analysis
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[16px] w-full">
             {list.map((feat, index) => (
-              <div key={index} className="flex flex-col gap-[16px] w-full">
+              <motion.div
+                key={index}
+                className="flex flex-col gap-[16px] w-full"
+                initial={{ opacity: 0, y: 18 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{
+                  duration: 0.45,
+                  ease: "easeOut",
+                  delay: index * 0.06,
+                }}
+                whileHover={{ y: -3 }}
+              >
                 <p className="font-medium leading-[20px] tracking-[0%] text-[#ffffff] max-w-[230px] text-[16px]">
                   {feat.txt}
                 </p>
                 <p className="text-[#9EA3A2] text-[14px] leading-[25px] tracking-[0%]">
                   {feat.paragraph}
                 </p>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
-      <div className="flex flex-col gap-[24px]">
+      <motion.div
+        className="flex flex-col gap-[24px]"
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.35 }}
+        transition={{ duration: 0.45, ease: "easeOut" }}
+      >
         <h3 className="w-full font-medium leading-[36px] text-[28px] max-w-[400px] tracking-[0%] text-[#ffffff]">
           Built for Modern Design Teams: AI-Powered Collaboration
         </h3>
         <div className="flex flex-col gap-[32px] w-full">
           {item.map((feat, index) => (
-            <div key={index} className="flex flex-col gap-[16px]">
+            <motion.div
+              key={index}
+              className="flex flex-col gap-[16px]"
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{
+                duration: 0.45,
+                ease: "easeOut",
+                delay: index * 0.06,
+              }}
+            >
               <h4 className="font-medium text-[20px] leading-[20px] tracking-[0%] text-[#ffffff]">
                 {feat.header}
               </h4>
@@ -128,10 +171,10 @@ const Transform = () => {
                   </p>
                 </li>
               </ul>
-            </div>
+            </motion.div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

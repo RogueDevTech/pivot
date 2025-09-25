@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Img1 from "@/components/images/company/company-eight.png";
 import Img2 from "@/components/images/company/company-nine.png";
@@ -5,6 +7,7 @@ import Image, { StaticImageData } from "next/image";
 import InnerText from "@/components/InnerText";
 import Bigger from "@/components/Bigger";
 import Minisize from "@/components/Minisize";
+import { motion } from "framer-motion";
 
 const Main = () => {
   interface BuildItem {
@@ -30,25 +33,46 @@ We have active Employee Resource Groups, inclusive hiring practices, and maintai
     <section className="flex flex-col gap-[32px] w-full lg:w-[729px]">
       <div className="flex lg:flex-row flex-col gap-[16px] justify-between">
         {array.map((ftr, index) => (
-          <div
+          <motion.div
             key={index}
             className="flex flex-col gap-[16px] justify-between lg:w-[357px] w-full"
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.35 }}
+            transition={{
+              duration: 0.45,
+              ease: "easeOut",
+              delay: index * 0.06,
+            }}
           >
-            <div className="relative w-full h-[189px] lg:w-[357px]">
+            <motion.div
+              className="relative w-full h-[189px] lg:w-[357px]"
+              initial={{ opacity: 0, scale: 0.98 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+              whileHover={{ scale: 1.015 }}
+            >
               <Image
                 src={ftr.img}
                 alt="img"
                 className="object-cover w-full h-full"
               />
-            </div>
+            </motion.div>
             <div className="flex flex-col gap-[16px] justify-between h-auto">
               <Minisize className="">{ftr.header}</Minisize>
               <InnerText>{ftr.para}</InnerText>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
-      <div className="flex flex-col gap-[16px]">
+      <motion.div
+        className="flex flex-col gap-[16px]"
+        initial={{ opacity: 0, y: 14 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.4 }}
+        transition={{ duration: 0.45, ease: "easeOut" }}
+      >
         <Bigger>The Future We are Building Together</Bigger>
         <InnerText>
           We are not just building an API platform—we are creating the
@@ -68,7 +92,7 @@ We have active Employee Resource Groups, inclusive hiring practices, and maintai
           Ready to start building? Get in touch with our team to learn how we
           can help power your next breakthrough application.
         </InnerText>
-      </div>
+      </motion.div>
     </section>
   );
 };

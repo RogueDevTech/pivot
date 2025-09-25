@@ -1,7 +1,9 @@
+"use client";
+
 import React from "react";
 import img3 from "@/components/images/solution/solution-code.webp";
 import Image from "next/image";
-
+import { motion } from "framer-motion";
 
 const SimpleIntegration = () => {
   const items = [
@@ -20,33 +22,69 @@ const SimpleIntegration = () => {
   ];
   return (
     <section className="flex flex-col gap-[48px] w-full">
-      <div className="">
+      <motion.div
+        className=""
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.4 }}
+        transition={{ duration: 0.45, ease: "easeOut" }}
+      >
         <h3 className="w-full mt-3 font-medium leading-[36px] text-[28px] tracking-[0%] text-[#ffffff]">
           Simple Integration, Powerful Results
         </h3>
-        <div className="relative w-full h-[350px] lg:h-[495px] mt-4">
+        <motion.div
+          className="relative w-full h-[350px] lg:h-[495px] mt-4"
+          initial={{ opacity: 0, scale: 0.98, y: 12 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.35 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          whileHover={{ scale: 1.02 }}
+        >
           <Image src={img3} fill alt="img" className="object-cover" />
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
       <div className="flex flex-col gap-[32px]">
-        <div className="">
+        <motion.div
+          className=""
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.45, ease: "easeOut" }}
+        >
           <h3 className="w-full font-medium leading-[36px] text-[28px] tracking-[0%] text-[#ffffff]">
             Why Developers Choose God&apos;s Eye API
           </h3>
           <div className="flex flex-col gap-[24px] mt-4">
             {items.map((ftr, index) => (
-              <div key={index} className="flex flex-col gap-[16px]">
+              <motion.div
+                key={index}
+                className="flex flex-col gap-[16px]"
+                initial={{ opacity: 0, y: 18 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.35 }}
+                transition={{
+                  duration: 0.45,
+                  ease: "easeOut",
+                  delay: index * 0.06,
+                }}
+              >
                 <h4 className="text-[#FFFFFF] text-[16px] leading-[20px] tracking-[0%] font-medium">
                   {ftr.header}
                 </h4>
                 <p className="text-[#9EA3A2] leading-[20px] tracking-[0%] text-[14px] font-normal w-full">
                   {ftr.list}
                 </p>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
-        <div className="flex flex-col gap-[16px]">
+        </motion.div>
+        <motion.div
+          className="flex flex-col gap-[16px]"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.35 }}
+          transition={{ duration: 0.45, ease: "easeOut", delay: 0.08 }}
+        >
           <p className="text-[#9EA3A2] leading-[20px] text-[14px] tracking-[0%] font-regular w-full">
             PivotLabs delivers AI-powered APIs that address complex technical
             challenges for developers and businesses. With a focus on developer
@@ -60,7 +98,7 @@ const SimpleIntegration = () => {
             documentation, interactive examples, and free tier access. Join the
             developer community shaping the future of intelligent applications.
           </p>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

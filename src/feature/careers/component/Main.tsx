@@ -1,3 +1,4 @@
+"use client";
 import Bigger from "@/components/Bigger";
 
 import React from "react";
@@ -5,47 +6,91 @@ import pic5 from "@/components/images/careers/career-five.png";
 import Image from "next/image";
 import InnerText from "@/components/InnerText";
 import Button from "@/components/Button";
+import { motion } from "framer-motion";
 
 const Main = () => {
   return (
-    <section className="flex flex-col gap-[48px] w-full">
-      <div className="flex flex-col gap-8 w-full">
+    <motion.section
+      className="flex flex-col gap-[48px] w-full"
+      initial={{ opacity: 0, y: 16 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
+    >
+      <motion.div
+        className="flex flex-col gap-8 w-full"
+        initial={{ opacity: 0, y: 12 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.4, ease: "easeOut" }}
+      >
         <Bigger>Why Choose Pivot Labs?</Bigger>
         <div className="flex flex-col lg:flex-row gap-[32px] w-full">
-          <div className="flex flex-col gap-2 w-full lg:w-[50%]">
+          <motion.div
+            className="flex flex-col gap-2 w-full lg:w-[50%]"
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.45, ease: "easeOut" }}
+          >
             <h4 className="text-[16px] leading-[20px] tracking-[0%] font-medium text-[#FFFFFF]">
               Work with Exceptional People
             </h4>
             <p className="w-full leading-[25px] tracking-[0%] text-[14px] text-[#9EA3A2]">
               Our team brings experience from top tech, PhDs, and engineers
-              who&apos;ve scaled to billions. Together, we&apos;re not just learning from
-              the best—we&apos;re pushing what&apos;s possible.
+              who&apos;ve scaled to billions. Together, we&apos;re not just
+              learning from the best—we&apos;re pushing what&apos;s possible.
             </p>
-          </div>
-          <div className="flex flex-col gap-2 w-full lg:w-[50%]">
+          </motion.div>
+          <motion.div
+            className="flex flex-col gap-2 w-full lg:w-[50%]"
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.45, ease: "easeOut", delay: 0.05 }}
+          >
             <h4 className="text-[16px] leading-[20px] tracking-[0%] font-medium text-[#FFFFFF]">
               Shape the Future of AI Infrastructure
             </h4>
             <p className="w-full leading-[25px] tracking-[0%] text-[14px] text-[#9EA3A2]">
-              We&apos;re a global team with a close-knit startup culture, built for
-              remote collaboration and distributed excellence—wherever you work
-              from.
+              We&apos;re a global team with a close-knit startup culture, built
+              for remote collaboration and distributed excellence—wherever you
+              work from.
             </p>
-          </div>
+          </motion.div>
         </div>
-      </div>
-      <div className="flex flex-col gap-[16px] w-full">
+      </motion.div>
+      <motion.div
+        className="flex flex-col gap-[16px] w-full"
+        initial={{ opacity: 0, y: 14 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.4, ease: "easeOut" }}
+      >
         <Bigger>What We Offer</Bigger>
         <div className="flex flex-col lg:flex-row gap-[16px] w-full">
-          <div className="relative w-full lg:w-[40%] h-[250px] lg:h-[373px]">
+          <motion.div
+            className="relative w-full lg:w-[40%] h-[250px] lg:h-[373px]"
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            whileHover={{ scale: 1.01 }}
+          >
             <Image
               src={pic5}
               fill
               alt="pic"
               className="object-cover w-full h-full"
             />
-          </div>
-          <div className="flex flex-col gap-[16px] w-full lg:w-[60%]">
+          </motion.div>
+          <motion.div
+            className="flex flex-col gap-[16px] w-full lg:w-[60%]"
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0.06 }}
+          >
             <div className="flex flex-col gap-[8px]">
               <h5 className="text-[16px] text-[#ffffff] leading-[20px] tracking-[0%] font-medium">
                 Compensation That Reflects Your Value
@@ -74,10 +119,16 @@ const Main = () => {
                 global collaborators.
               </InnerText>
             </div>
-          </div>
+          </motion.div>
         </div>
-      </div>
-      <div className="flex flex-col gap-[16px] w-full">
+      </motion.div>
+      <motion.div
+        className="flex flex-col gap-[16px] w-full"
+        initial={{ opacity: 0, y: 14 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.4, ease: "easeOut" }}
+      >
         <p className="text-[#9EA3A2] leading-[20px] tracking-[0%] text-[14px] font-regular">
           Openings
         </p>
@@ -92,8 +143,8 @@ const Main = () => {
           </p>
           <Button>Lets Connect</Button>
         </div>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 };
 
