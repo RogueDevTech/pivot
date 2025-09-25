@@ -1,8 +1,11 @@
+"use client";
+
 import React from "react";
 import prod1 from "@/components/images/products/product-image-one.png";
 import prod2 from "@/components/images/products/product-two.jpg";
 import prod3 from "@/components/images/products/product-3.jpg";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const IntelligentDesign = () => {
   const text = [
@@ -29,20 +32,47 @@ const IntelligentDesign = () => {
   return (
     <section className="flex flex-col gap-[48px] w-full">
       <div className="flex flex-col lg:flex-row items-center gap-[16px] w-full">
-        <div className="relative w-full lg:w-[70%] h-[296px]">
+        <motion.div
+          className="relative w-full lg:w-[70%] h-[296px]"
+          initial={{ opacity: 0, y: 18 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.35 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          whileHover={{ scale: 1.01 }}
+        >
           <Image src={prod1} fill alt="prod" className="object-cover" />
-        </div>
+        </motion.div>
         <div className="flex flex-col justify-between gap-[16px] w-full lg:w-[30%]">
-          <div className="relative w-full h-[140px]">
+          <motion.div
+            className="relative w-full h-[140px]"
+            initial={{ opacity: 0, x: 16 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.35 }}
+            transition={{ duration: 0.45, ease: "easeOut", delay: 0.05 }}
+            whileHover={{ y: -3 }}
+          >
             <Image src={prod2} fill alt="prod" className="object-cover" />
-          </div>
-          <div className="relative w-full h-[140px]">
+          </motion.div>
+          <motion.div
+            className="relative w-full h-[140px]"
+            initial={{ opacity: 0, x: 16 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.35 }}
+            transition={{ duration: 0.45, ease: "easeOut", delay: 0.12 }}
+            whileHover={{ y: -3 }}
+          >
             <Image src={prod3} fill alt="prod" className="object-cover" />
-          </div>
+          </motion.div>
         </div>
       </div>
       <div className="flex flex-col gap-[32px] w-full">
-        <div className="flex flex-col gap-[16px]">
+        <motion.div
+          className="flex flex-col gap-[16px]"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.45, ease: "easeOut" }}
+        >
           <h3 className="w-full font-medium leading-[36px] text-[28px] tracking-[0%] text-[#ffffff]">
             The Power of Artificial General Intelligence in Design
           </h3>
@@ -89,10 +119,21 @@ const IntelligentDesign = () => {
               another tool.
             </p>
           </div>
-        </div>
+        </motion.div>
         <div className="flex flex-col gap-[32px] w-full">
           {text.map((ftxt, index) => (
-            <div key={index} className="flex flex-col gap-[16px] w-full">
+            <motion.div
+              key={index}
+              className="flex flex-col gap-[16px] w-full"
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.35 }}
+              transition={{
+                duration: 0.45,
+                ease: "easeOut",
+                delay: index * 0.06,
+              }}
+            >
               <h3 className="w-full font-medium leading-[36px] text-[28px] tracking-[0%] text-[#ffffff]">
                 {ftxt.header}
               </h3>
@@ -110,7 +151,7 @@ const IntelligentDesign = () => {
                   {ftxt.txtfour}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

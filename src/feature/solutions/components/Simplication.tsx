@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import img1 from "@/components/images/solution/solution-two.webp";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const tabs = [
   { name: "Flexible Integration", slug: "flexible-integration" },
@@ -10,7 +11,6 @@ const tabs = [
   { name: "Built for Scale", slug: "built-for-scale" },
   { name: "Security First", slug: "security-first" },
 ];
-
 
 const Simplication = () => {
   const [activeTab, setActiveTab] = useState(tabs[0].slug);
@@ -395,8 +395,6 @@ const Simplication = () => {
               )}
             </div>
             <div className="border-t border-[#EAEAEA]"></div>
-
-          
           </div>
         </div>
       </div>
@@ -405,13 +403,19 @@ const Simplication = () => {
 
   return (
     <section className="flex flex-col gap-[12px] w-full">
-      <div className="">
+      <motion.div
+        className=""
+        initial={{ opacity: 0, y: 12 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.4 }}
+        transition={{ duration: 0.45, ease: "easeOut" }}
+      >
         <h3 className="w-full mt-3 font-medium leading-[36px] text-[28px] tracking-[0%] text-[#ffffff]">
           Simplifying identity verification for modern applications
         </h3>
-        <ul className="flex gap-[16px] flex-wrap mt-4">
+        <motion.ul className="flex gap-[16px] flex-wrap mt-4">
           {tabs.map((ftr, index) => (
-            <li
+            <motion.li
               key={index}
               onClick={() => setActiveTab(ftr.slug)}
               className={`cursor-pointer leading-[100%] tracking-[0%] font-regular p-2 rounded transition-colors ${
@@ -419,12 +423,14 @@ const Simplication = () => {
                   ? "text-[#FFFFFF] border-b-1 border[#fffff] "
                   : "text-[#9EA3A2] hover:text-[#FFFFFF]"
               }`}
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.98 }}
             >
               {ftr.name}
-            </li>
+            </motion.li>
           ))}
-        </ul>
-      </div>
+        </motion.ul>
+      </motion.div>
       <div className="mt-[24px]">{tabContents[activeTab]}</div>
     </section>
   );
