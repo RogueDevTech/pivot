@@ -1,37 +1,56 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
 
 const Section: React.FC<{
   title: string;
   children: React.ReactNode;
 }> = ({ title, children }) => {
   return (
-    <div className="flex flex-col gap-[8px]">
+    <motion.div
+      className="flex flex-col gap-[8px]"
+      initial={{ opacity: 0, y: 12 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
+    >
       <h2 className="text-[#ffffff] text-[18px] leading-[24px] font-medium tracking-[0%]">
         {title}
       </h2>
       <div className="flex flex-col gap-[8px]">{children}</div>
       <div className="border-t border-[#EAEAEA] mt-[12px]"></div>
-    </div>
+    </motion.div>
   );
 };
 
 export default function TermsOfServicePage() {
   return (
-    <main className="w-full h-full">
+    <motion.main
+      className="w-full h-full"
+      initial={{ opacity: 0, y: 16 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
+    >
       <section className="flex flex-col gap-[24px] w-full py-[32px]">
-        <div className="flex flex-col gap-[12px]">
+        <motion.div
+          className="flex flex-col gap-[12px]"
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+        >
           <h1 className="text-[#ffffff] text-[28px] leading-[36px] font-medium tracking-[0%]">
             Terms of Service
           </h1>
           <p className="text-[#9EA3A2] text-[14px] leading-[20px] tracking-[0%] max-w-[800px]">
-            Welcome to Pivot. These Terms of Service (&apos;Terms&apos;) govern your
-            access to and use of our website, products, and services
-            (collectively, the &apos;Services&apos;). By accessing or using the Services,
-            you agree to be bound by these Terms.
+            Welcome to Pivot. These Terms of Service (&apos;Terms&apos;) govern
+            your access to and use of our website, products, and services
+            (collectively, the &apos;Services&apos;). By accessing or using the
+            Services, you agree to be bound by these Terms.
           </p>
-        </div>
+        </motion.div>
 
         <Section title="1. Eligibility">
           <p className="text-[#9EA3A2] text-[14px] leading-[20px]">
@@ -90,10 +109,11 @@ export default function TermsOfServicePage() {
 
         <Section title="6. Disclaimers">
           <p className="text-[#9EA3A2] text-[14px] leading-[20px]">
-            The Services are provided on an &apos;as is&apos; and &apos;as available&apos; basis. To
-            the fullest extent permitted by law, Pivot disclaims all warranties,
-            express or implied, including merchantability, fitness for a
-            particular purpose, and non-infringement.
+            The Services are provided on an &apos;as is&apos; and &apos;as
+            available&apos; basis. To the fullest extent permitted by law, Pivot
+            disclaims all warranties, express or implied, including
+            merchantability, fitness for a particular purpose, and
+            non-infringement.
           </p>
         </Section>
 
@@ -145,6 +165,6 @@ export default function TermsOfServicePage() {
           </p>
         </Section>
       </section>
-    </main>
+    </motion.main>
   );
 }
