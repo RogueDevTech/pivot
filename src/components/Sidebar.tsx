@@ -52,7 +52,7 @@ const Sidebar = () => {
       { name: "Company", path: "/company" },
       { name: "Partners", path: "/partners" },
       { name: "Careers", path: "/careers" },
-      { name: "Foundation", path: "/pivot-foundation" },
+      { name: "Community", path: "/community" },
       { name: "Blog", path: "/blog" },
     ],
     support: [
