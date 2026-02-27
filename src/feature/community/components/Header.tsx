@@ -33,7 +33,7 @@ const Header = () => {
             viewport={{ once: true, amount: 0.6 }}
             transition={{ duration: 0.35, ease: "easeOut" }}
           >
-            Pivot Foundation by Pivot Labs
+            Bridging the Gap by Pivot Labs
           </motion.h3>
           <motion.p
             className="w-full leading-[25px] mt-1 mb-3 tracking-[0%] max-w-[690px] text-[#9EA3A2] text-400 text-[14px]"
