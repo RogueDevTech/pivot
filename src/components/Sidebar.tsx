@@ -31,7 +31,7 @@ const Sidebar = () => {
       { name: "Company", path: "/company" },
       { name: "Partners", path: "/partners" },
       { name: "Careers", path: "/careers" },
-      { name: "Foundation", path: "/pivot-foundation" },
+      { name: "Pivot Foundation", path: "/pivotfoundation" },
       { name: "Blog", path: "/blog" },
       { name: "Book Call", path: "/book-call" },
       { name: "Help", path: "/help" },
@@ -52,7 +52,7 @@ const Sidebar = () => {
       { name: "Company", path: "/company" },
       { name: "Partners", path: "/partners" },
       { name: "Careers", path: "/careers" },
-      { name: "Community", path: "/community" },
+      { name: "Pivot Foundation", path: "/pivotfoundation" },
       { name: "Blog", path: "/blog" },
     ],
     support: [
